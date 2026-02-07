@@ -1,0 +1,18 @@
+{
+    "name": "bytelearn",
+    "version": "1.0.0",
+    "description": "Google ByteLearn - Computer Science E-Learning Platform",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx serve . -p 3000",
+        "dev": "npx serve . -p 3000 --cors"
+    },
+    "keywords": [
+        "e-learning",
+        "computer science",
+        "education",
+        "firebase"
+    ],
+    "author": "ByteLearn Team",
+    "license": "MIT"
+}

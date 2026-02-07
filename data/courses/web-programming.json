@@ -1,0 +1,295 @@
+{
+    "id": "web-programming",
+    "title": "Web Programming",
+    "description": "Build modern websites with HTML, CSS, and JavaScript. Learn responsive design, DOM manipulation, and modern web APIs.",
+    "thumbnail": "/assets/images/courses/web.svg",
+    "level": "Beginner",
+    "duration": "10 weeks",
+    "totalLessons": 52,
+    "totalStudents": 8920,
+    "rating": 4.7,
+    "instructor": {
+        "name": "Alex Rivera",
+        "title": "Full-Stack Developer"
+    },
+    "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Web Development"
+    ],
+    "prerequisites": [
+        "Basic computer skills"
+    ],
+    "learningOutcomes": [
+        "Build responsive websites from scratch",
+        "Master HTML5 semantic elements",
+        "Style pages with modern CSS techniques",
+        "Add interactivity with JavaScript",
+        "Understand web accessibility standards"
+    ],
+    "modules": [
+        {
+            "id": "m1",
+            "title": "HTML Fundamentals",
+            "description": "Learn the building blocks of web pages with HTML5.",
+            "duration": "2 weeks",
+            "chapters": [
+                {
+                    "id": "m1-c1",
+                    "title": "Introduction to HTML",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m1-c2",
+                    "title": "HTML Document Structure",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m1-c3",
+                    "title": "Text Elements",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m1-c4",
+                    "title": "Links and Images",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m1-c5",
+                    "title": "Lists and Tables",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m1-c6",
+                    "title": "Forms and Inputs",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m1-c7",
+                    "title": "Practice: Build a Profile Page",
+                    "type": "exercise",
+                    "duration": "30 min"
+                }
+            ],
+            "quiz": {
+                "id": "m1-quiz",
+                "title": "HTML Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m2",
+            "title": "CSS Styling",
+            "description": "Transform your HTML with beautiful CSS styles.",
+            "duration": "2.5 weeks",
+            "chapters": [
+                {
+                    "id": "m2-c1",
+                    "title": "Introduction to CSS",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m2-c2",
+                    "title": "Selectors and Specificity",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m2-c3",
+                    "title": "Colors and Typography",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m2-c4",
+                    "title": "The Box Model",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m2-c5",
+                    "title": "Flexbox Layout",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m2-c6",
+                    "title": "CSS Grid",
+                    "type": "video",
+                    "duration": "24 min"
+                },
+                {
+                    "id": "m2-c7",
+                    "title": "Transitions and Animations",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m2-c8",
+                    "title": "Practice: Style a Landing Page",
+                    "type": "exercise",
+                    "duration": "45 min"
+                }
+            ],
+            "quiz": {
+                "id": "m2-quiz",
+                "title": "CSS Quiz",
+                "questions": 12,
+                "xpReward": 120
+            }
+        },
+        {
+            "id": "m3",
+            "title": "JavaScript Basics",
+            "description": "Add interactivity to your websites with JavaScript.",
+            "duration": "2.5 weeks",
+            "chapters": [
+                {
+                    "id": "m3-c1",
+                    "title": "Introduction to JavaScript",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m3-c2",
+                    "title": "Variables and Data Types",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m3-c3",
+                    "title": "Operators and Expressions",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m3-c4",
+                    "title": "Control Flow",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m3-c5",
+                    "title": "Functions",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m3-c6",
+                    "title": "Arrays and Objects",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m3-c7",
+                    "title": "Practice: JavaScript Basics",
+                    "type": "exercise",
+                    "duration": "30 min"
+                }
+            ],
+            "quiz": {
+                "id": "m3-quiz",
+                "title": "JavaScript Basics Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m4",
+            "title": "DOM Manipulation",
+            "description": "Learn to dynamically update web pages with the DOM API.",
+            "duration": "1.5 weeks",
+            "chapters": [
+                {
+                    "id": "m4-c1",
+                    "title": "What is the DOM?",
+                    "type": "video",
+                    "duration": "10 min"
+                },
+                {
+                    "id": "m4-c2",
+                    "title": "Selecting Elements",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m4-c3",
+                    "title": "Modifying Elements",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m4-c4",
+                    "title": "Event Handling",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m4-c5",
+                    "title": "Practice: Interactive Todo App",
+                    "type": "exercise",
+                    "duration": "45 min"
+                }
+            ],
+            "quiz": {
+                "id": "m4-quiz",
+                "title": "DOM Quiz",
+                "questions": 8,
+                "xpReward": 80
+            }
+        },
+        {
+            "id": "m5",
+            "title": "Responsive Design",
+            "description": "Make your websites look great on all devices.",
+            "duration": "1.5 weeks",
+            "chapters": [
+                {
+                    "id": "m5-c1",
+                    "title": "Mobile-First Approach",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m5-c2",
+                    "title": "Media Queries",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m5-c3",
+                    "title": "Responsive Images",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m5-c4",
+                    "title": "Responsive Navigation",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m5-c5",
+                    "title": "Project: Responsive Portfolio",
+                    "type": "exercise",
+                    "duration": "60 min"
+                }
+            ],
+            "quiz": {
+                "id": "m5-quiz",
+                "title": "Responsive Design Quiz",
+                "questions": 8,
+                "xpReward": 80
+            }
+        }
+    ]
+}

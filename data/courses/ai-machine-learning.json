@@ -1,0 +1,266 @@
+{
+    "id": "ai-machine-learning",
+    "title": "AI & Machine Learning",
+    "description": "Explore artificial intelligence and machine learning concepts. From basics to building your first models.",
+    "thumbnail": "/assets/images/courses/ai.svg",
+    "level": "Intermediate",
+    "duration": "12 weeks",
+    "totalLessons": 48,
+    "totalStudents": 6340,
+    "rating": 4.9,
+    "instructor": {
+        "name": "Dr. James Liu",
+        "title": "AI Research Scientist"
+    },
+    "tags": [
+        "AI",
+        "Machine Learning",
+        "Python",
+        "Data Science"
+    ],
+    "prerequisites": [
+        "Python programming basics",
+        "Basic mathematics"
+    ],
+    "learningOutcomes": [
+        "Understand core AI and ML concepts",
+        "Work with popular ML libraries",
+        "Build and train machine learning models",
+        "Apply ML to real-world problems",
+        "Understand neural networks basics"
+    ],
+    "modules": [
+        {
+            "id": "m1",
+            "title": "Introduction to AI",
+            "description": "Understand what AI is and its applications in the modern world.",
+            "duration": "1.5 weeks",
+            "chapters": [
+                {
+                    "id": "m1-c1",
+                    "title": "What is Artificial Intelligence?",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m1-c2",
+                    "title": "History of AI",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m1-c3",
+                    "title": "Types of AI",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m1-c4",
+                    "title": "AI Applications Today",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m1-c5",
+                    "title": "Ethics in AI",
+                    "type": "video",
+                    "duration": "16 min"
+                }
+            ],
+            "quiz": {
+                "id": "m1-quiz",
+                "title": "AI Fundamentals Quiz",
+                "questions": 8,
+                "xpReward": 80
+            }
+        },
+        {
+            "id": "m2",
+            "title": "Data Science Essentials",
+            "description": "Learn to work with data using Python libraries.",
+            "duration": "2 weeks",
+            "chapters": [
+                {
+                    "id": "m2-c1",
+                    "title": "Introduction to NumPy",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m2-c2",
+                    "title": "Data Manipulation with Pandas",
+                    "type": "video",
+                    "duration": "25 min"
+                },
+                {
+                    "id": "m2-c3",
+                    "title": "Data Visualization with Matplotlib",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m2-c4",
+                    "title": "Exploratory Data Analysis",
+                    "type": "video",
+                    "duration": "24 min"
+                },
+                {
+                    "id": "m2-c5",
+                    "title": "Practice: Analyze a Dataset",
+                    "type": "exercise",
+                    "duration": "45 min"
+                }
+            ],
+            "quiz": {
+                "id": "m2-quiz",
+                "title": "Data Science Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m3",
+            "title": "Machine Learning Fundamentals",
+            "description": "Learn the core concepts of machine learning.",
+            "duration": "2.5 weeks",
+            "chapters": [
+                {
+                    "id": "m3-c1",
+                    "title": "What is Machine Learning?",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m3-c2",
+                    "title": "Supervised vs Unsupervised Learning",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m3-c3",
+                    "title": "Training and Testing",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m3-c4",
+                    "title": "Model Evaluation Metrics",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m3-c5",
+                    "title": "Overfitting and Underfitting",
+                    "type": "video",
+                    "duration": "14 min"
+                }
+            ],
+            "quiz": {
+                "id": "m3-quiz",
+                "title": "ML Fundamentals Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m4",
+            "title": "Supervised Learning",
+            "description": "Build classification and regression models.",
+            "duration": "3 weeks",
+            "chapters": [
+                {
+                    "id": "m4-c1",
+                    "title": "Linear Regression",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m4-c2",
+                    "title": "Logistic Regression",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m4-c3",
+                    "title": "Decision Trees",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m4-c4",
+                    "title": "Random Forests",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m4-c5",
+                    "title": "Support Vector Machines",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m4-c6",
+                    "title": "Project: Predict House Prices",
+                    "type": "exercise",
+                    "duration": "60 min"
+                }
+            ],
+            "quiz": {
+                "id": "m4-quiz",
+                "title": "Supervised Learning Quiz",
+                "questions": 12,
+                "xpReward": 120
+            }
+        },
+        {
+            "id": "m5",
+            "title": "Introduction to Neural Networks",
+            "description": "Understand how neural networks work.",
+            "duration": "3 weeks",
+            "chapters": [
+                {
+                    "id": "m5-c1",
+                    "title": "What are Neural Networks?",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m5-c2",
+                    "title": "Perceptrons and Activation",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m5-c3",
+                    "title": "Building a Neural Network",
+                    "type": "video",
+                    "duration": "25 min"
+                },
+                {
+                    "id": "m5-c4",
+                    "title": "Training with Backpropagation",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m5-c5",
+                    "title": "Introduction to Deep Learning",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m5-c6",
+                    "title": "Project: Image Classifier",
+                    "type": "exercise",
+                    "duration": "90 min"
+                }
+            ],
+            "quiz": {
+                "id": "m5-quiz",
+                "title": "Neural Networks Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        }
+    ]
+}

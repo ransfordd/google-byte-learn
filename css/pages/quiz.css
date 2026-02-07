@@ -1,0 +1,414 @@
+/* ========================================
+   Google ByteLearn - Quiz Page Styles
+   ======================================== */
+
+.quiz-page {
+    min-height: 100vh;
+    background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Quiz Header ===== */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.quiz-header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.quiz-info {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .quiz-info {
+        display: block;
+        padding-left: var(--space-4);
+        border-left: 1px solid var(--border-light);
+    }
+}
+
+.quiz-module {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.quiz-title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    margin-bottom: 0;
+}
+
+.quiz-header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.quiz-timer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--red-50);
+    color: var(--google-red);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+}
+
+.quiz-progress-indicator {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+/* ===== Progress Bar ===== */
+.quiz-progress-bar {
+    height: 4px;
+    background: var(--gray-200);
+}
+
+.quiz-progress-fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+/* ===== Quiz Container ===== */
+.quiz-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-6);
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.quiz-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Question Card ===== */
+.question-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.question-number {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.question-points {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--success);
+    background: var(--green-50);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+}
+
+.question-text {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-6);
+    line-height: 1.4;
+}
+
+/* ===== Options ===== */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--bg-secondary);
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.option-item:hover {
+    background: var(--blue-50);
+    border-color: var(--blue-200);
+}
+
+.option-item.selected {
+    background: var(--blue-50);
+    border-color: var(--primary);
+}
+
+.option-item input {
+    display: none;
+}
+
+.option-marker {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-semibold);
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.option-item.selected .option-marker {
+    background: var(--primary);
+    color: white;
+}
+
+.option-text {
+    flex: 1;
+    font-size: var(--text-base);
+}
+
+/* Correct/Incorrect states */
+.option-item.correct {
+    background: var(--green-50);
+    border-color: var(--success);
+}
+
+.option-item.correct .option-marker {
+    background: var(--success);
+    color: white;
+}
+
+.option-item.incorrect {
+    background: var(--red-50);
+    border-color: var(--danger);
+}
+
+.option-item.incorrect .option-marker {
+    background: var(--danger);
+    color: white;
+}
+
+/* ===== Feedback ===== */
+.question-feedback {
+    margin-top: var(--space-6);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    background: var(--bg-secondary);
+}
+
+.question-feedback.hidden {
+    display: none;
+}
+
+.feedback-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-2);
+}
+
+.feedback-header.correct {
+    color: var(--success);
+}
+
+.feedback-header.incorrect {
+    color: var(--danger);
+}
+
+.feedback-explanation {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+/* ===== Quiz Navigation ===== */
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+}
+
+/* ===== Results Modal ===== */
+.results-content {
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.results-header {
+    margin-bottom: var(--space-6);
+}
+
+.results-icon {
+    font-size: 64px;
+    margin-bottom: var(--space-3);
+}
+
+.results-header h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-1);
+}
+
+.results-header p {
+    color: var(--text-secondary);
+}
+
+/* Score Circle */
+.results-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .results-score {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.score-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.score-circle svg {
+    transform: rotate(-90deg);
+}
+
+.score-bg {
+    fill: none;
+    stroke: var(--gray-200);
+    stroke-width: 8;
+}
+
+.score-fill {
+    fill: none;
+    stroke: var(--success);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.score-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+}
+
+.score-details {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.score-stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Breakdown */
+.results-breakdown {
+    margin-bottom: var(--space-6);
+}
+
+.results-breakdown h4 {
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.breakdown-list {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.breakdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-semibold);
+    position: relative;
+}
+
+.breakdown-item.correct {
+    background: var(--green-50);
+    color: var(--success);
+}
+
+.breakdown-item.incorrect {
+    background: var(--red-50);
+    color: var(--danger);
+}
+
+.breakdown-num {
+    font-size: var(--text-sm);
+}
+
+.breakdown-status {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: var(--text-xs);
+}
+
+/* Results Actions */
+.results-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}

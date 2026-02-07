@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personalized learning dashboard on Google ByteLearn.">
+    <title>Dashboard - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages/dashboard.css">
+
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="app-sidebar sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-brand">
+                    <svg class="sidebar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                        <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="sidebar-title">ByteLearn</span>
+                </a>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <nav class="sidebar-nav">
+                    <div class="sidebar-section">
+                        <a href="dashboard.html" class="sidebar-link active">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                            <span class="sidebar-link-text">Dashboard</span>
+                        </a>
+                        <a href="courses.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                            <span class="sidebar-link-text">Courses</span>
+                        </a>
+                        <a href="practice/editor.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                            <span class="sidebar-link-text">Practice</span>
+                        </a>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <span class="sidebar-section-title">Progress</span>
+                        <a href="leaderboard.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 20V10M12 20V4M6 20v-6" />
+                            </svg>
+                            <span class="sidebar-link-text">Leaderboard</span>
+                        </a>
+                        <a href="achievements.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                            <span class="sidebar-link-text">Achievements</span>
+                        </a>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <span class="sidebar-section-title">Connect</span>
+                        <a href="classroom.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                                <path d="M16 3.13a4 4 0 010 7.75" />
+                            </svg>
+                            <span class="sidebar-link-text">Classroom</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user dropdown" id="userDropdown">
+                    <div class="avatar" id="userAvatar">U</div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name" id="userName">User</span>
+                        <span class="sidebar-user-email" id="userEmail">user@example.com</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </div>
+            </div>
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <header class="app-header">
+                <button class="btn btn-icon btn-ghost mobile-menu-toggle" id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+
+                <div class="navbar-search hide-mobile" style="max-width: 400px; flex: 1;">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input type="search" class="search-input form-input" placeholder="Search courses...">
+                </div>
+
+                <div class="navbar-actions" style="margin-left: auto;">
+                    <button class="navbar-action-btn" aria-label="Notifications">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 01-3.46 0" />
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="navbar-action-btn" id="themeToggle" aria-label="Toggle theme">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="app-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section animate-fade-in">
+                    <div class="welcome-content">
+                        <h1>Welcome back, <span id="welcomeName">Learner</span>! 👋</h1>
+                        <p>Ready to continue your learning journey? Pick up where you left off.</p>
+                    </div>
+                    <div class="welcome-stats">
+                        <div class="streak-card">
+                            <div class="streak-icon">🔥</div>
+                            <div class="streak-info">
+                                <span class="streak-count" id="streakCount">0</span>
+                                <span class="streak-label">Day Streak</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stats Grid -->
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card card animate-fade-in-up">
+                            <div class="stat-icon" style="background: var(--blue-50); color: var(--google-blue);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                            </div>
+                            <div class="stat-value" id="totalXP">0</div>
+                            <div class="stat-label">Total XP</div>
+                        </div>
+                        <div class="stat-card card animate-fade-in-up" style="animation-delay: 100ms;">
+                            <div class="stat-icon" style="background: var(--green-50); color: var(--google-green);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div class="stat-value" id="lessonsCompleted">0</div>
+                            <div class="stat-label">Lessons Completed</div>
+                        </div>
+                        <div class="stat-card card animate-fade-in-up" style="animation-delay: 200ms;">
+                            <div class="stat-icon" style="background: var(--yellow-50); color: var(--google-yellow);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="8" r="6" />
+                                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                                </svg>
+                            </div>
+                            <div class="stat-value" id="badgesEarned">0</div>
+                            <div class="stat-label">Badges Earned</div>
+                        </div>
+                        <div class="stat-card card animate-fade-in-up" style="animation-delay: 300ms;">
+                            <div class="stat-icon" style="background: var(--red-50); color: var(--google-red);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div class="stat-value" id="hoursLearned">0h</div>
+                            <div class="stat-label">Hours Learned</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Continue Learning Section -->
+                <section class="continue-section">
+                    <div class="section-header">
+                        <h2>Continue Learning</h2>
+                        <a href="courses.html" class="btn btn-ghost">View All</a>
+                    </div>
+
+                    <div class="continue-grid" id="continueGrid">
+                        <!-- Continue cards will be populated by JS -->
+                        <div class="continue-card card hover-lift animate-fade-in-up">
+                            <div class="continue-image">
+                                <img src="../assets/images/courses/python.svg" alt="Python" loading="lazy">
+                            </div>
+                            <div class="continue-content">
+                                <span class="badge badge-primary">In Progress</span>
+                                <h3>Programming with Python</h3>
+                                <p class="continue-chapter">Chapter 5: Functions and Modules</p>
+                                <div class="progress-labeled">
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" style="width: 45%"></div>
+                                    </div>
+                                    <span class="progress-value">45%</span>
+                                </div>
+                            </div>
+                            <a href="course/lesson.html?course=python-programming&chapter=5"
+                                class="btn btn-primary">Continue</a>
+                        </div>
+
+                        <div class="continue-card card hover-lift animate-fade-in-up" style="animation-delay: 100ms;">
+                            <div class="continue-image">
+                                <img src="../assets/images/courses/web.svg" alt="Web" loading="lazy">
+                            </div>
+                            <div class="continue-content">
+                                <span class="badge badge-primary">In Progress</span>
+                                <h3>Web Programming</h3>
+                                <p class="continue-chapter">Chapter 3: CSS Fundamentals</p>
+                                <div class="progress-labeled">
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="progress-value">28%</span>
+                                </div>
+                            </div>
+                            <a href="course/lesson.html?course=web-programming&chapter=3"
+                                class="btn btn-primary">Continue</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recommended Courses -->
+                <section class="recommended-section">
+                    <div class="section-header">
+                        <h2>Recommended For You</h2>
+                    </div>
+                    <div class="courses-grid grid grid-auto-fit-md">
+                        <article class="course-card card card-clickable hover-lift">
+                            <div class="course-image-wrapper">
+                                <img src="../assets/images/courses/ai.svg" alt="AI & ML" class="card-image"
+                                    loading="lazy">
+                                <span class="course-level badge badge-warning">Intermediate</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="course-meta">
+                                    <span>30 hours</span>
+                                    <span>28 lessons</span>
+                                </div>
+                                <h3 class="card-title">AI & Machine Learning</h3>
+                                <p class="card-text">Dive into AI fundamentals and build your first ML models.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="course/course-detail.html?id=ai-machine-learning"
+                                    class="btn btn-primary btn-block">Start Course</a>
+                            </div>
+                        </article>
+
+                        <article class="course-card card card-clickable hover-lift">
+                            <div class="course-image-wrapper">
+                                <img src="../assets/images/courses/database.svg" alt="Databases" class="card-image"
+                                    loading="lazy">
+                                <span class="course-level badge badge-success">Beginner</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="course-meta">
+                                    <span>15 hours</span>
+                                    <span>20 lessons</span>
+                                </div>
+                                <h3 class="card-title">Introduction to Databases</h3>
+                                <p class="card-text">Learn SQL and database design fundamentals.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="course/course-detail.html?id=databases-intro"
+                                    class="btn btn-primary btn-block">Start Course</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="activity-section">
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                    </div>
+                    <div class="activity-list card">
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: var(--green-50); color: var(--google-green);">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Completed</strong> Chapter 4: Variables and Data Types</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                            <span class="activity-xp">+50 XP</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: var(--blue-50); color: var(--google-blue);">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="8" r="6" />
+                                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Earned badge:</strong> Python Starter</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                            <span class="activity-xp">+100 XP</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"
+                                style="background: var(--yellow-50); color: var(--google-yellow);">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83" />
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Started</strong> 7-day learning streak!</p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                            <span class="activity-xp">+25 XP</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <button class="chatbot-trigger btn btn-primary btn-icon" aria-label="Open AI assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        initFirebase();
+
+        // Check auth state
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                window.location.href = 'auth/login.html';
+                return;
+            }
+
+            // Update UI with user info
+            document.getElementById('welcomeName').textContent = user.displayName?.split(' ')[0] || 'Learner';
+            document.getElementById('userName').textContent = user.displayName || 'User';
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('userAvatar').textContent = (user.displayName || 'U').charAt(0).toUpperCase();
+
+            // Load user data from Firestore
+            loadUserData(user.uid);
+        });
+
+        async function loadUserData(uid) {
+            try {
+                const doc = await firebase.firestore().collection('users').doc(uid).get();
+                if (doc.exists) {
+                    const data = doc.data();
+
+                    // Update stats
+                    document.getElementById('totalXP').textContent = data.gamification?.xp || 0;
+                    document.getElementById('streakCount').textContent = data.gamification?.streak || 0;
+                    document.getElementById('badgesEarned').textContent = data.gamification?.badges?.length || 0;
+
+                    // Calculate lessons completed and hours
+                    let lessonsCompleted = 0;
+                    let hoursLearned = 0;
+                    if (data.progress) {
+                        Object.values(data.progress).forEach(course => {
+                            lessonsCompleted += course.completed?.length || 0;
+                            hoursLearned += course.timeSpent || 0;
+                        });
+                    }
+                    document.getElementById('lessonsCompleted').textContent = lessonsCompleted;
+                    document.getElementById('hoursLearned').textContent = Math.round(hoursLearned / 60) + 'h';
+                }
+            } catch (error) {
+                console.error('Error loading user data:', error);
+            }
+        }
+
+        // Sidebar toggle
+        document.getElementById('sidebarToggle')?.addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.querySelector('.app-main').classList.toggle('sidebar-collapsed');
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuToggle')?.addEventListener('click', () => {
+            document.getElementById('sidebar').classList.add('open');
+            document.getElementById('sidebarOverlay').classList.add('active');
+        });
+
+        document.getElementById('sidebarOverlay')?.addEventListener('click', () => {
+            document.getElementById('sidebar').classList.remove('open');
+            document.getElementById('sidebarOverlay').classList.remove('active');
+        });
+
+        // Theme toggle
+        document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>

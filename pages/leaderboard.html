@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See the top learners on Google ByteLearn.">
+    <title>Leaderboard - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages/leaderboard.css">
+
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="page-layout">
+    <header class="page-header">
+        <nav class="navbar container-2xl">
+            <a href="../index.html" class="navbar-brand">
+                <svg class="navbar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                    <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="navbar-title">Byte<span>Learn</span></span>
+            </a>
+            <div class="navbar-nav hide-mobile">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+            </div>
+            <div class="navbar-actions">
+                <a href="auth/login.html" class="btn btn-outline auth-btn-login">Log In</a>
+                <a href="auth/signup.html" class="btn btn-primary auth-btn-signup">Sign Up</a>
+                <button class="btn btn-icon btn-ghost mobile-menu-toggle" aria-label="Menu" id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="navbar-title">Byte<span>Learn</span></span>
+                <button class="btn btn-icon btn-ghost" id="closeMobileMenu" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <a href="../index.html" class="mobile-menu-link">Home</a>
+                <a href="courses.html" class="mobile-menu-link">Courses</a>
+                <a href="dashboard.html" class="mobile-menu-link">Dashboard</a>
+                <a href="leaderboard.html" class="mobile-menu-link active">Leaderboard</a>
+                <hr style="border-color: var(--border-light); margin: var(--space-3) 0;">
+                <a href="auth/login.html" class="mobile-menu-link">Log In</a>
+                <a href="auth/signup.html" class="btn btn-primary btn-block">Sign Up Free</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="page-content">
+        <div class="container">
+            <section class="leaderboard-header animate-fade-in">
+                <h1>🏆 Leaderboard</h1>
+                <p>See how you rank against other learners!</p>
+
+                <div class="leaderboard-tabs">
+                    <button class="leaderboard-tab active" data-period="weekly">This Week</button>
+                    <button class="leaderboard-tab" data-period="monthly">This Month</button>
+                    <button class="leaderboard-tab" data-period="alltime">All Time</button>
+                </div>
+            </section>
+
+            <!-- Top 3 Podium -->
+            <section class="podium-section animate-fade-in-up">
+                <div class="podium">
+                    <div class="podium-item second">
+                        <div class="podium-avatar">
+                            <div class="avatar avatar-lg">S</div>
+                            <span class="podium-medal">🥈</span>
+                        </div>
+                        <span class="podium-name">Sarah Chen</span>
+                        <span class="podium-xp">4,850 XP</span>
+                    </div>
+                    <div class="podium-item first">
+                        <div class="podium-avatar">
+                            <div class="avatar avatar-xl">A</div>
+                            <span class="podium-medal">🥇</span>
+                        </div>
+                        <span class="podium-name">Alex Johnson</span>
+                        <span class="podium-xp">5,230 XP</span>
+                    </div>
+                    <div class="podium-item third">
+                        <div class="podium-avatar">
+                            <div class="avatar avatar-lg">M</div>
+                            <span class="podium-medal">🥉</span>
+                        </div>
+                        <span class="podium-name">Mike Davis</span>
+                        <span class="podium-xp">4,120 XP</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full Leaderboard -->
+            <section class="leaderboard-section">
+                <div class="leaderboard-card card">
+                    <div class="leaderboard-row header">
+                        <span class="rank-col">Rank</span>
+                        <span class="user-col">Learner</span>
+                        <span class="xp-col">XP</span>
+                        <span class="streak-col hide-mobile">Streak</span>
+                        <span class="level-col hide-mobile">Level</span>
+                    </div>
+
+                    <div class="leaderboard-row highlight">
+                        <span class="rank-col"><span class="rank-badge you">12</span></span>
+                        <span class="user-col">
+                            <div class="avatar">Y</div>
+                            <span class="user-name">You</span>
+                        </span>
+                        <span class="xp-col">1,250 XP</span>
+                        <span class="streak-col hide-mobile">🔥 7</span>
+                        <span class="level-col hide-mobile">Level 5</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge rank-4">4</span></span>
+                        <span class="user-col">
+                            <div class="avatar">J</div>
+                            <span class="user-name">Jane Smith</span>
+                        </span>
+                        <span class="xp-col">3,890 XP</span>
+                        <span class="streak-col hide-mobile">🔥 15</span>
+                        <span class="level-col hide-mobile">Level 12</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">5</span></span>
+                        <span class="user-col">
+                            <div class="avatar">D</div>
+                            <span class="user-name">David Wilson</span>
+                        </span>
+                        <span class="xp-col">3,654 XP</span>
+                        <span class="streak-col hide-mobile">🔥 12</span>
+                        <span class="level-col hide-mobile">Level 11</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">6</span></span>
+                        <span class="user-col">
+                            <div class="avatar">E</div>
+                            <span class="user-name">Emily Brown</span>
+                        </span>
+                        <span class="xp-col">3,421 XP</span>
+                        <span class="streak-col hide-mobile">🔥 21</span>
+                        <span class="level-col hide-mobile">Level 10</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">7</span></span>
+                        <span class="user-col">
+                            <div class="avatar">C</div>
+                            <span class="user-name">Chris Lee</span>
+                        </span>
+                        <span class="xp-col">3,210 XP</span>
+                        <span class="streak-col hide-mobile">🔥 8</span>
+                        <span class="level-col hide-mobile">Level 10</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">8</span></span>
+                        <span class="user-col">
+                            <div class="avatar">O</div>
+                            <span class="user-name">Olivia Taylor</span>
+                        </span>
+                        <span class="xp-col">2,987 XP</span>
+                        <span class="streak-col hide-mobile">🔥 5</span>
+                        <span class="level-col hide-mobile">Level 9</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">9</span></span>
+                        <span class="user-col">
+                            <div class="avatar">R</div>
+                            <span class="user-name">Ryan Martinez</span>
+                        </span>
+                        <span class="xp-col">2,756 XP</span>
+                        <span class="streak-col hide-mobile">🔥 10</span>
+                        <span class="level-col hide-mobile">Level 9</span>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <span class="rank-col"><span class="rank-badge">10</span></span>
+                        <span class="user-col">
+                            <div class="avatar">L</div>
+                            <span class="user-name">Lisa Anderson</span>
+                        </span>
+                        <span class="xp-col">2,543 XP</span>
+                        <span class="streak-col hide-mobile">🔥 14</span>
+                        <span class="level-col hide-mobile">Level 8</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-simple">
+                <p>&copy; 2026 Google ByteLearn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Tab switching
+        document.querySelectorAll('.leaderboard-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.leaderboard-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // In production, fetch data for the selected period
+                console.log('Loading:', tab.dataset.period);
+            });
+        });
+    </script>
+</body>
+
+</html>

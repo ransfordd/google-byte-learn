@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/pages/course-detail.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="page-layout">
+    <!-- Header -->
+    <header class="page-header">
+        <nav class="navbar container-2xl">
+            <a href="../../index.html" class="navbar-brand">
+                <svg class="navbar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                    <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="navbar-title">Byte<span>Learn</span></span>
+            </a>
+            <div class="navbar-nav hide-mobile">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../courses.html" class="nav-link">Courses</a>
+                <a href="../dashboard.html" class="nav-link">Dashboard</a>
+                <a href="../leaderboard.html" class="nav-link">Leaderboard</a>
+            </div>
+            <div class="navbar-actions">
+                <a href="../auth/login.html" class="btn btn-outline auth-btn-login">Log In</a>
+                <a href="../auth/signup.html" class="btn btn-primary auth-btn-signup">Sign Up</a>
+                <button class="btn btn-icon btn-ghost mobile-menu-toggle" aria-label="Toggle menu"
+                    id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="navbar-title">Byte<span>Learn</span></span>
+                <button class="btn btn-icon btn-ghost" id="closeMobileMenu" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <a href="../../index.html" class="mobile-menu-link">Home</a>
+                <a href="../courses.html" class="mobile-menu-link">Courses</a>
+                <a href="../dashboard.html" class="mobile-menu-link">Dashboard</a>
+                <a href="../leaderboard.html" class="mobile-menu-link">Leaderboard</a>
+                <hr style="border-color: var(--border-light); margin: var(--space-3) 0;">
+                <a href="../auth/login.html" class="mobile-menu-link">Log In</a>
+                <a href="../auth/signup.html" class="btn btn-primary btn-block">Sign Up Free</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="page-content">
+        <!-- Course Hero -->
+        <section class="course-hero" id="courseHero">
+            <div class="container">
+                <nav class="breadcrumbs mb-4">
+                    <span class="breadcrumb-item"><a href="../courses.html">Courses</a></span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item" id="breadcrumbCourse">Programming with Python</span>
+                </nav>
+
+                <div class="course-hero-grid">
+                    <div class="course-hero-content animate-fade-in-up">
+                        <span class="badge badge-success" id="courseLevel">Beginner</span>
+                        <h1 id="courseTitle">Programming with Python</h1>
+                        <p id="courseDescription">Learn Python from scratch. Master variables, functions,
+                            object-oriented programming, and build real-world projects.</p>
+
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span id="courseDuration">20 hours</span>
+                            </div>
+                            <div class="course-stat">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                </svg>
+                                <span id="courseLessons">25 lessons</span>
+                            </div>
+                            <div class="course-stat">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>
+                                <span id="courseStudents">1,234 students</span>
+                            </div>
+                        </div>
+
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-lg" id="enrollBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                                Start Learning
+                            </button>
+                            <button class="btn btn-secondary btn-lg">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
+                                </svg>
+                                Save Course
+                            </button>
+                        </div>
+                    </div>
+                    <div class="course-hero-image animate-fade-in">
+                        <img src="../../assets/images/courses/python.svg" alt="Python Programming" id="courseImage">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Content -->
+        <section class="course-content-section">
+            <div class="container">
+                <div class="course-layout">
+                    <!-- Main Content -->
+                    <div class="course-main">
+                        <!-- Tabs -->
+                        <div class="tabs">
+                            <button class="tab active" data-tab="syllabus">Syllabus</button>
+                            <button class="tab" data-tab="overview">Overview</button>
+                            <button class="tab" data-tab="reviews">Reviews</button>
+                        </div>
+
+                        <!-- Syllabus Tab -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="syllabus">
+                                <div class="syllabus-list" id="syllabusList">
+                                    <!-- Module 1 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="1">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 1</span>
+                                                <h3 class="module-title">Getting Started with Python</h3>
+                                                <span class="module-meta">4 lessons • 2 hours</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9" />
+                                            </svg>
+                                        </div>
+                                        <div class="module-content">
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=python-programming&module=1&chapter=1"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Introduction to Python</span>
+                                                        <span class="chapter-duration">15 min</span>
+                                                    </div>
+                                                    <span class="chapter-status"></span>
+                                                </a>
+                                                <a href="lesson.html?course=python-programming&module=1&chapter=2"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Installing Python & Setup</span>
+                                                        <span class="chapter-duration">20 min</span>
+                                                    </div>
+                                                    <span class="chapter-status"></span>
+                                                </a>
+                                                <a href="lesson.html?course=python-programming&module=1&chapter=3"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Your First Python Program</span>
+                                                        <span class="chapter-duration">25 min</span>
+                                                    </div>
+                                                    <span class="chapter-status"></span>
+                                                </a>
+                                                <a href="lesson.html?course=python-programming&module=1&chapter=4"
+                                                    class="chapter-item exercise">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polyline points="16 18 22 12 16 6" />
+                                                            <polyline points="8 6 2 12 8 18" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Practice: Hello World</span>
+                                                        <span class="chapter-duration">30 min</span>
+                                                    </div>
+                                                    <span class="chapter-status"></span>
+                                                </a>
+                                            </div>
+                                            <a href="#" class="module-quiz">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M9 11l3 3L22 4" />
+                                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                                                </svg>
+                                                Module Quiz
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 2 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="2">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 2</span>
+                                                <h3 class="module-title">Variables and Data Types</h3>
+                                                <span class="module-meta">5 lessons • 3 hours</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9" />
+                                            </svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;">
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=python-programming&module=2&chapter=1"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Understanding Variables</span>
+                                                        <span class="chapter-duration">20 min</span>
+                                                    </div>
+                                                </a>
+                                                <a href="lesson.html?course=python-programming&module=2&chapter=2"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Numbers and Strings</span>
+                                                        <span class="chapter-duration">25 min</span>
+                                                    </div>
+                                                </a>
+                                                <a href="lesson.html?course=python-programming&module=2&chapter=3"
+                                                    class="chapter-item">
+                                                    <div class="chapter-icon">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2">
+                                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="chapter-info">
+                                                        <span class="chapter-title">Lists and Tuples</span>
+                                                        <span class="chapter-duration">30 min</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 3 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="3">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 3</span>
+                                                <h3 class="module-title">Control Flow</h3>
+                                                <span class="module-meta">6 lessons • 4 hours</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9" />
+                                            </svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;"></div>
+                                    </div>
+
+                                    <!-- Module 4 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="4">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 4</span>
+                                                <h3 class="module-title">Functions and Modules</h3>
+                                                <span class="module-meta">5 lessons • 3 hours</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9" />
+                                            </svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;"></div>
+                                    </div>
+
+                                    <!-- Module 5 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="5">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 5</span>
+                                                <h3 class="module-title">Object-Oriented Programming</h3>
+                                                <span class="module-meta">5 lessons • 4 hours</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="6 9 12 15 18 9" />
+                                            </svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Overview Tab -->
+                            <div class="tab-pane" id="overview">
+                                <div class="overview-section">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="learning-outcomes">
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Write Python programs from scratch with proper syntax and structure
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Work with variables, data types, and data structures
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Implement control flow with conditionals and loops
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Create reusable functions and import modules
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Understand object-oriented programming concepts
+                                        </li>
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="var(--google-green)" stroke-width="2">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Build real-world projects to apply your skills
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="overview-section">
+                                    <h3>Prerequisites</h3>
+                                    <p>This course is designed for complete beginners. No prior programming experience
+                                        is required. You just need:</p>
+                                    <ul>
+                                        <li>A computer with internet access</li>
+                                        <li>Willingness to learn and practice</li>
+                                    </ul>
+                                </div>
+
+                                <div class="overview-section">
+                                    <h3>Course Description</h3>
+                                    <p>This comprehensive Python course takes you from zero to confident programmer.
+                                        You'll learn through a combination of video lessons, interactive coding
+                                        exercises, and hands-on projects.</p>
+                                    <p>Python is one of the most popular and versatile programming languages, used in
+                                        web development, data science, AI, automation, and more. This course provides a
+                                        solid foundation that will prepare you for advanced topics and real-world
+                                        applications.</p>
+                                </div>
+                            </div>
+
+                            <!-- Reviews Tab -->
+                            <div class="tab-pane" id="reviews">
+                                <div class="reviews-header">
+                                    <div class="rating-summary">
+                                        <span class="rating-score">4.8</span>
+                                        <div class="rating-stars">★★★★★</div>
+                                        <span class="rating-count">234 reviews</span>
+                                    </div>
+                                </div>
+                                <div class="reviews-list">
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div class="avatar">A</div>
+                                            <div class="review-info">
+                                                <span class="review-name">Alex Johnson</span>
+                                                <span class="review-date">2 weeks ago</span>
+                                            </div>
+                                            <div class="review-rating">★★★★★</div>
+                                        </div>
+                                        <p class="review-text">Excellent course! The explanations are clear and the
+                                            hands-on exercises really help solidify the concepts. Highly recommended for
+                                            beginners.</p>
+                                    </div>
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div class="avatar">S</div>
+                                            <div class="review-info">
+                                                <span class="review-name">Sarah Chen</span>
+                                                <span class="review-date">1 month ago</span>
+                                            </div>
+                                            <div class="review-rating">★★★★★</div>
+                                        </div>
+                                        <p class="review-text">I've tried several Python courses before, but this one
+                                            stands out. The built-in code editor makes practicing so convenient!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="course-sidebar">
+                        <div class="sidebar-card card sticky">
+                            <div class="sidebar-progress">
+                                <h4>Your Progress</h4>
+                                <div class="progress-labeled">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-value">0%</span>
+                                </div>
+                                <p class="progress-text">0 of 25 lessons completed</p>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="sidebar-info">
+                                <div class="info-item">
+                                    <span class="info-label">Difficulty</span>
+                                    <span class="info-value">Beginner</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Duration</span>
+                                    <span class="info-value">20 hours</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Modules</span>
+                                    <span class="info-value">5 modules</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Exercises</span>
+                                    <span class="info-value">15 coding exercises</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Certificate</span>
+                                    <span class="info-value">Yes, upon completion</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block btn-lg">Start Learning</button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-simple">
+                <p>&copy; 2026 Google ByteLearn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/app.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Module accordion
+        document.querySelectorAll('.module-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const chevron = header.querySelector('.module-chevron');
+                const isOpen = content.style.display !== 'none';
+
+                content.style.display = isOpen ? 'none' : 'block';
+                chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+            });
+        });
+
+        // Load course data based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('id') || 'python-programming';
+
+        // Course data could be loaded from Firebase here
+        console.log('Loading course:', courseId);
+    </script>
+</body>
+
+</html>

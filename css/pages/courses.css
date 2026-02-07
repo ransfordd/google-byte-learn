@@ -1,0 +1,186 @@
+/* ========================================
+   Google ByteLearn - Courses Page Styles
+   ======================================== */
+
+/* ===== Courses Header ===== */
+.courses-header {
+    padding: var(--space-10) 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--blue-50) 100%);
+    margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-4)) var(--space-8);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+.courses-header h1 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-3);
+}
+
+.courses-header p {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Filters Section ===== */
+.filters-section {
+    margin-bottom: var(--space-6);
+}
+
+.filters-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .filters-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.filter-tabs {
+    display: flex;
+    gap: var(--space-2);
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+}
+
+.filter-tab {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-tab:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.filter-tab.active {
+    background: var(--primary);
+    color: white;
+}
+
+.filter-sort {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.filter-sort .form-select {
+    min-width: 180px;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+}
+
+/* ===== Courses Grid ===== */
+.courses-list-section {
+    padding-bottom: var(--space-12);
+}
+
+.courses-grid {
+    gap: var(--space-6);
+}
+
+/* Course Card Enhancements */
+.course-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-meta {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.course-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: auto;
+    padding-top: var(--space-3);
+}
+
+.tag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+/* ===== Footer Simple ===== */
+.footer-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-6) 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-simple {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-simple p {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    margin-bottom: 0;
+}
+
+.footer-links-inline {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.footer-links-inline a {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+}
+
+.footer-links-inline a:hover {
+    color: white;
+}
+
+/* ===== Empty State ===== */
+.no-results {
+    text-align: center;
+    padding: var(--space-12) var(--space-6);
+    color: var(--text-muted);
+}
+
+.no-results h3 {
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}

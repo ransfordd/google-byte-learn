@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all Computer Science courses on Google ByteLearn.">
+    <title>Courses - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages/courses.css">
+
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="page-layout">
+    <!-- Header -->
+    <header class="page-header">
+        <nav class="navbar container-2xl">
+            <a href="../index.html" class="navbar-brand">
+                <svg class="navbar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                    <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="navbar-title">Byte<span>Learn</span></span>
+            </a>
+
+            <div class="navbar-center hide-mobile">
+                <div class="navbar-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input type="search" class="search-input form-input" id="searchInput"
+                        placeholder="Search courses..." aria-label="Search courses">
+                </div>
+            </div>
+
+            <div class="navbar-nav hide-mobile">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link active">Courses</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+            </div>
+
+            <div class="navbar-actions">
+                <a href="auth/login.html" class="btn btn-outline auth-btn-login">Log In</a>
+                <a href="auth/signup.html" class="btn btn-primary auth-btn-signup">Sign Up</a>
+                <div class="navbar-user user-menu" style="display: none;">
+                    <div class="avatar" id="userAvatar">U</div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="btn btn-icon btn-ghost mobile-menu-toggle" aria-label="Toggle menu"
+                    id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="navbar-title">Byte<span>Learn</span></span>
+                <button class="btn btn-icon btn-ghost" id="closeMobileMenu" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <a href="../index.html" class="mobile-menu-link">Home</a>
+                <a href="courses.html" class="mobile-menu-link active">Courses</a>
+                <a href="dashboard.html" class="mobile-menu-link">Dashboard</a>
+                <a href="leaderboard.html" class="mobile-menu-link">Leaderboard</a>
+                <hr style="border-color: var(--border-light); margin: var(--space-3) 0;">
+                <a href="auth/login.html" class="mobile-menu-link">Log In</a>
+                <a href="auth/signup.html" class="btn btn-primary btn-block">Sign Up Free</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="courses-header animate-fade-in">
+                <div class="courses-header-content">
+                    <h1>Explore Courses</h1>
+                    <p>Master computer science with our hands-on, project-based courses.</p>
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <section class="filters-section">
+                <div class="filters-bar">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Courses</button>
+                        <button class="filter-tab" data-filter="beginner">Beginner</button>
+                        <button class="filter-tab" data-filter="intermediate">Intermediate</button>
+                        <button class="filter-tab" data-filter="advanced">Advanced</button>
+                    </div>
+                    <div class="filter-sort">
+                        <select class="form-select" id="sortSelect">
+                            <option value="popular">Most Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="duration-asc">Duration: Short to Long</option>
+                            <option value="duration-desc">Duration: Long to Short</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Grid -->
+            <section class="courses-list-section">
+                <div class="courses-grid grid grid-auto-fit-md stagger-children" id="coursesGrid">
+                    <!-- Python -->
+                    <article class="course-card card card-clickable hover-lift" data-level="beginner"
+                        data-course="python-programming">
+                        <div class="course-image-wrapper">
+                            <img src="../assets/images/courses/python.svg" alt="Python Programming" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    20 hours
+                                </span>
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    25 lessons
+                                </span>
+                            </div>
+                            <h3 class="card-title">Programming with Python</h3>
+                            <p class="card-text">Learn Python from scratch. Master variables, functions, OOP, and build
+                                real projects.</p>
+                            <div class="course-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Beginner</span>
+                                <span class="tag">Programming</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="course/python-programming.html"
+                                class="btn btn-primary btn-block">View Course</a>
+                        </div>
+                    </article>
+
+                    <!-- Web Programming -->
+                    <article class="course-card card card-clickable hover-lift" data-level="beginner"
+                        data-course="web-programming">
+                        <div class="course-image-wrapper">
+                            <img src="../assets/images/courses/web.svg" alt="Web Programming" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    25 hours
+                                </span>
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    30 lessons
+                                </span>
+                            </div>
+                            <h3 class="card-title">Web Programming</h3>
+                            <p class="card-text">Master HTML, CSS, and JavaScript. Build responsive websites and
+                                interactive web apps.</p>
+                            <div class="course-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="course/web-programming.html"
+                                class="btn btn-primary btn-block">View Course</a>
+                        </div>
+                    </article>
+
+                    <!-- AI & Machine Learning -->
+                    <article class="course-card card card-clickable hover-lift" data-level="intermediate"
+                        data-course="ai-machine-learning">
+                        <div class="course-image-wrapper">
+                            <img src="../assets/images/courses/ai.svg" alt="AI & Machine Learning" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-warning">Intermediate</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    30 hours
+                                </span>
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    28 lessons
+                                </span>
+                            </div>
+                            <h3 class="card-title">AI & Machine Learning</h3>
+                            <p class="card-text">Dive into AI fundamentals, neural networks, and build your first ML
+                                models.</p>
+                            <div class="course-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="course/ai-machine-learning.html"
+                                class="btn btn-primary btn-block">View Course</a>
+                        </div>
+                    </article>
+
+                    <!-- Computer Fundamentals -->
+                    <article class="course-card card card-clickable hover-lift" data-level="beginner"
+                        data-course="computer-fundamentals">
+                        <div class="course-image-wrapper">
+                            <img src="../assets/images/courses/computer.svg" alt="Computer Fundamentals"
+                                class="card-image" loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    15 hours
+                                </span>
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    20 lessons
+                                </span>
+                            </div>
+                            <h3 class="card-title">Computer Fundamentals</h3>
+                            <p class="card-text">Understand how computers work — hardware, software, operating systems,
+                                and networks.</p>
+                            <div class="course-tags">
+                                <span class="tag">Basics</span>
+                                <span class="tag">Hardware</span>
+                                <span class="tag">Networks</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="course/computer-fundamentals.html"
+                                class="btn btn-primary btn-block">View Course</a>
+                        </div>
+                    </article>
+
+                    <!-- Introduction to Databases -->
+                    <article class="course-card card card-clickable hover-lift" data-level="beginner"
+                        data-course="databases-intro">
+                        <div class="course-image-wrapper">
+                            <img src="../assets/images/courses/database.svg" alt="Introduction to Databases"
+                                class="card-image" loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    18 hours
+                                </span>
+                                <span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    22 lessons
+                                </span>
+                            </div>
+                            <h3 class="card-title">Introduction to Databases</h3>
+                            <p class="card-text">Learn SQL and database design. Work with relational and NoSQL
+                                databases.</p>
+                            <div class="course-tags">
+                                <span class="tag">SQL</span>
+                                <span class="tag">Database</span>
+                                <span class="tag">NoSQL</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="course/databases-intro.html"
+                                class="btn btn-primary btn-block">View Course</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-simple">
+                <p>&copy; 2026 Google ByteLearn. All rights reserved.</p>
+                <div class="footer-links-inline">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const courseCards = document.querySelectorAll('.course-card');
+        const searchInput = document.getElementById('searchInput');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+
+                courseCards.forEach(card => {
+                    const level = card.dataset.level;
+                    if (filter === 'all' || level === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        searchInput?.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const text = card.querySelector('.card-text').textContent.toLowerCase();
+
+                if (title.includes(query) || text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Sort functionality
+        document.getElementById('sortSelect')?.addEventListener('change', (e) => {
+            const grid = document.getElementById('coursesGrid');
+            const cards = Array.from(courseCards);
+
+            // Sort logic can be expanded based on actual data attributes
+            // For now, this is a placeholder
+            console.log('Sort by:', e.target.value);
+        });
+    </script>
+</body>
+
+</html>

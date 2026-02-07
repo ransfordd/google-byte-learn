@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice coding with our built-in code editor on Google ByteLearn.">
+    <title>Code Editor - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/pages/editor.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="editor-page">
+    <!-- Editor Header -->
+    <header class="editor-header">
+        <div class="editor-header-left">
+            <a href="../dashboard.html" class="btn btn-ghost btn-sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span class="hide-mobile">Dashboard</span>
+            </a>
+            <div class="editor-file-info">
+                <span class="file-name" id="fileName">untitled.py</span>
+                <span class="file-status saved" id="fileStatus">Saved</span>
+            </div>
+        </div>
+        <div class="editor-header-center">
+            <select class="form-select form-select-sm" id="languageSelect">
+                <option value="python" selected>Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="sql">SQL</option>
+            </select>
+        </div>
+        <div class="editor-header-right">
+            <button class="btn btn-ghost btn-sm" id="settingsBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+                </svg>
+            </button>
+            <button class="btn btn-ghost btn-sm" id="themeToggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                </svg>
+            </button>
+            <button class="btn btn-primary btn-sm" id="runBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Run
+            </button>
+        </div>
+    </header>
+
+    <!-- Editor Layout -->
+    <div class="editor-layout">
+        <!-- Problem Panel -->
+        <aside class="problem-panel" id="problemPanel">
+            <div class="panel-header">
+                <h3>Challenge</h3>
+                <button class="btn btn-icon btn-ghost panel-toggle" id="problemToggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+            </div>
+            <div class="panel-content">
+                <div class="challenge-info">
+                    <span class="badge badge-success">Easy</span>
+                    <h2 class="challenge-title">Hello World</h2>
+                    <p class="challenge-desc">Write a Python program that prints "Hello, World!" to the console.</p>
+                </div>
+
+                <div class="challenge-section">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Use the <code>print()</code> function to output text.</li>
+                        <li>The text should be exactly: Hello, World!</li>
+                        <li>Make sure to include proper capitalization and punctuation.</li>
+                    </ol>
+                </div>
+
+                <div class="challenge-section">
+                    <h4>Expected Output</h4>
+                    <pre class="expected-output">Hello, World!</pre>
+                </div>
+
+                <div class="challenge-section">
+                    <h4>Hints</h4>
+                    <details class="hint-details">
+                        <summary>Hint 1</summary>
+                        <p>In Python, you can print text using <code>print("your text")</code></p>
+                    </details>
+                    <details class="hint-details">
+                        <summary>Hint 2</summary>
+                        <p>Make sure to use quotes around your string.</p>
+                    </details>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Code Editor -->
+        <main class="code-panel">
+            <div class="code-editor-wrapper">
+                <div class="line-numbers" id="lineNumbers">1</div>
+                <textarea id="codeEditor" class="code-textarea" spellcheck="false"
+                    placeholder="# Write your code here..."># Write your Python code here
+print("Hello, World!")</textarea>
+            </div>
+        </main>
+
+        <!-- Output Panel -->
+        <aside class="output-panel" id="outputPanel">
+            <div class="panel-header">
+                <div class="panel-tabs">
+                    <button class="panel-tab active" data-tab="output">Output</button>
+                    <button class="panel-tab" data-tab="tests">Tests</button>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-ghost btn-sm" id="clearOutput">Clear</button>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="output-pane active" id="output">
+                    <pre class="output-text" id="outputText">Click "Run" to execute your code...</pre>
+                </div>
+                <div class="output-pane" id="tests">
+                    <div class="test-results">
+                        <div class="test-item pending">
+                            <span class="test-icon">○</span>
+                            <span class="test-name">Output matches expected</span>
+                        </div>
+                        <div class="test-item pending">
+                            <span class="test-icon">○</span>
+                            <span class="test-name">No syntax errors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-content success-modal">
+                <div class="success-icon">🎉</div>
+                <h2>Congratulations!</h2>
+                <p>You completed the challenge and earned</p>
+                <div class="xp-earned">+50 XP</div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="tryAgain">Try Again</button>
+                    <button class="btn btn-primary" id="nextChallenge">Next Challenge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/app.js"></script>
+    <script>
+        const codeEditor = document.getElementById('codeEditor');
+        const lineNumbers = document.getElementById('lineNumbers');
+        const outputText = document.getElementById('outputText');
+        const fileStatus = document.getElementById('fileStatus');
+
+        // Line numbers update
+        function updateLineNumbers() {
+            const lines = codeEditor.value.split('\n').length;
+            lineNumbers.innerHTML = Array.from({ length: lines }, (_, i) => i + 1).join('<br>');
+        }
+
+        codeEditor.addEventListener('input', () => {
+            updateLineNumbers();
+            fileStatus.textContent = 'Unsaved';
+            fileStatus.classList.remove('saved');
+        });
+
+        // Sync scroll
+        codeEditor.addEventListener('scroll', () => {
+            lineNumbers.scrollTop = codeEditor.scrollTop;
+        });
+
+        // Tab key support
+        codeEditor.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const start = codeEditor.selectionStart;
+                const end = codeEditor.selectionEnd;
+                codeEditor.value = codeEditor.value.substring(0, start) + '    ' + codeEditor.value.substring(end);
+                codeEditor.selectionStart = codeEditor.selectionEnd = start + 4;
+                updateLineNumbers();
+            }
+        });
+
+        // Run code
+        document.getElementById('runBtn')?.addEventListener('click', () => {
+            const code = codeEditor.value;
+
+            // Simulate running (in production, use a backend service)
+            try {
+                const printRegex = /print\(['"](.*?)['"]\)/g;
+                let outputs = [];
+                let match;
+
+                while ((match = printRegex.exec(code)) !== null) {
+                    outputs.push(match[1]);
+                }
+
+                if (outputs.length > 0) {
+                    outputText.textContent = outputs.join('\n');
+                    outputText.classList.remove('error');
+
+                    // Check if correct
+                    if (outputs.includes('Hello, World!')) {
+                        document.getElementById('successModal').classList.add('open');
+                    }
+                } else {
+                    outputText.textContent = '(No output)';
+                }
+            } catch (e) {
+                outputText.textContent = 'Error: ' + e.message;
+                outputText.classList.add('error');
+            }
+
+            fileStatus.textContent = 'Saved';
+            fileStatus.classList.add('saved');
+        });
+
+        // Clear output
+        document.getElementById('clearOutput')?.addEventListener('click', () => {
+            outputText.textContent = 'Click "Run" to execute your code...';
+            outputText.classList.remove('error');
+        });
+
+        // Panel tabs
+        document.querySelectorAll('.panel-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.panel-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.output-pane').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Problem panel toggle
+        document.getElementById('problemToggle')?.addEventListener('click', () => {
+            document.getElementById('problemPanel').classList.toggle('collapsed');
+        });
+
+        // Modal close
+        document.getElementById('tryAgain')?.addEventListener('click', () => {
+            document.getElementById('successModal').classList.remove('open');
+        });
+
+        document.getElementById('nextChallenge')?.addEventListener('click', () => {
+            // In production, navigate to next challenge
+            alert('Next challenge would load here!');
+            document.getElementById('successModal').classList.remove('open');
+        });
+
+        // Theme toggle
+        document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+
+        // Initialize
+        updateLineNumbers();
+    </script>
+</body>
+
+</html>

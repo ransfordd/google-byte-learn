@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Databases - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/pages/course-detail.css">
+    <link rel="stylesheet" href="../../css/pages/course-hero.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="page-layout">
+    <main class="page-content">
+        <!-- Course Hero - Database Theme -->
+        <section class="course-hero course-hero-database">
+            <div class="hero-background">
+                <div class="hero-pattern"></div>
+                <div class="hero-gradient"></div>
+                <div class="floating-elements">
+                    <div class="floating-code floating-code-1">SELECT * FROM</div>
+                    <div class="floating-code floating-code-2">JOIN users ON</div>
+                    <div class="floating-code floating-code-3">WHERE id = 1</div>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Hero Navigation -->
+                <nav class="hero-nav">
+                    <a href="../../index.html" class="hero-nav-brand">
+                        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="white" fill-opacity="0.2" />
+                            <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>ByteLearn</span>
+                    </a>
+                    <div class="hero-nav-links">
+                        <a href="../../index.html" class="hero-nav-link">Home</a>
+                        <a href="../courses.html" class="hero-nav-link">Courses</a>
+                        <a href="../dashboard.html" class="hero-nav-link">Dashboard</a>
+                    </div>
+                    <div class="hero-nav-actions">
+                        <a href="../auth/login.html" class="btn btn-glass btn-sm">Log In</a>
+                        <a href="../auth/signup.html" class="btn btn-white btn-sm">Sign Up</a>
+                    </div>
+                </nav>
+
+                <nav class="breadcrumbs mb-4">
+                    <span class="breadcrumb-item"><a href="../courses.html">Courses</a></span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Introduction to Databases</span>
+                </nav>
+
+                <div class="course-hero-grid">
+                    <div class="course-hero-content animate-fade-in-up">
+                        <div class="course-badges">
+                            <span class="badge badge-success">Beginner</span>
+                            <span class="badge badge-outline">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                                4.7 Rating
+                            </span>
+                        </div>
+                        <h1>Introduction to Databases</h1>
+                        <p class="hero-description">Learn to store, manage, and query data. Master SQL and understand database design principles that power modern applications.</p>
+
+                        <div class="course-meta-cards">
+                            <div class="meta-card">
+                                <div class="meta-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <div class="meta-info">
+                                    <span class="meta-value">8 Weeks</span>
+                                    <span class="meta-label">Duration</span>
+                                </div>
+                            </div>
+                            <div class="meta-card">
+                                <div class="meta-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                </div>
+                                <div class="meta-info">
+                                    <span class="meta-value">40 Lessons</span>
+                                    <span class="meta-label">Total Content</span>
+                                </div>
+                            </div>
+                            <div class="meta-card">
+                                <div class="meta-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" />
+                                    </svg>
+                                </div>
+                                <div class="meta-info">
+                                    <span class="meta-value">7,850+</span>
+                                    <span class="meta-label">Students</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar"><span>DK</span></div>
+                            <div class="instructor-info">
+                                <span class="instructor-name">David Kim</span>
+                                <span class="instructor-title">Database Engineer</span>
+                            </div>
+                        </div>
+
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-lg btn-glow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                                Start Learning Free
+                            </button>
+                            <button class="btn btn-glass btn-lg">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" />
+                                </svg>
+                                Save Course
+                            </button>
+                        </div>
+                    </div>
+                    <div class="course-hero-visual animate-fade-in">
+                        <div class="visual-card">
+                            <div class="visual-icon">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                </svg>
+                            </div>
+                            <div class="visual-stats">
+                                <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Modules</span></div>
+                                <div class="stat-item"><span class="stat-number">10</span><span class="stat-label">Exercises</span></div>
+                                <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Quizzes</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Content -->
+        <section class="course-content-section">
+            <div class="container">
+                <div class="course-layout">
+                    <div class="course-main">
+                        <div class="tabs">
+                            <button class="tab active" data-tab="syllabus">Syllabus</button>
+                            <button class="tab" data-tab="overview">Overview</button>
+                            <button class="tab" data-tab="reviews">Reviews</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="syllabus">
+                                <div class="syllabus-list">
+                                    <!-- Module 1 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="1">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 1</span>
+                                                <h3 class="module-title">Database Fundamentals</h3>
+                                                <span class="module-meta">4 lessons • 1 week</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+                                        </div>
+                                        <div class="module-content">
+                                            <p class="module-description">Understand what databases are and why we need them.</p>
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=databases-intro&module=1&chapter=1" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">What is a Database?</span><span class="chapter-duration">12 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=1&chapter=2" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Types of Databases</span><span class="chapter-duration">14 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=1&chapter=3" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Database Management Systems</span><span class="chapter-duration">15 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=1&chapter=4" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Setting Up Your Environment</span><span class="chapter-duration">18 min</span></div></a>
+                                            </div>
+                                            <a href="quiz.html?course=databases-intro&module=1" class="module-quiz"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>Database Basics Quiz • 6 questions • 60 XP</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 2 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="2">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 2</span>
+                                                <h3 class="module-title">SQL Basics</h3>
+                                                <span class="module-meta">6 lessons • 2 weeks</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;">
+                                            <p class="module-description">Learn the fundamentals of SQL queries.</p>
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=1" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">SELECT Statements</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=2" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Filtering with WHERE</span><span class="chapter-duration">14 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=3" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Sorting with ORDER BY</span><span class="chapter-duration">10 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=4" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">INSERT Statements</span><span class="chapter-duration">12 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=5" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">UPDATE and DELETE</span><span class="chapter-duration">14 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=2&chapter=6" class="chapter-item exercise"><div class="chapter-icon exercise"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></div><div class="chapter-info"><span class="chapter-title">Practice: Basic Queries</span><span class="chapter-duration">30 min</span></div></a>
+                                            </div>
+                                            <a href="quiz.html?course=databases-intro&module=2" class="module-quiz"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>SQL Basics Quiz • 10 questions • 100 XP</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 3 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="3">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 3</span>
+                                                <h3 class="module-title">Database Design</h3>
+                                                <span class="module-meta">6 lessons • 2 weeks</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;">
+                                            <p class="module-description">Learn to design efficient database schemas.</p>
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=1" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Tables and Data Types</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=2" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Primary and Foreign Keys</span><span class="chapter-duration">18 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=3" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Relationships: One-to-One, One-to-Many</span><span class="chapter-duration">20 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=4" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Many-to-Many Relationships</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=5" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Normalization</span><span class="chapter-duration">22 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=3&chapter=6" class="chapter-item exercise"><div class="chapter-icon exercise"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></div><div class="chapter-info"><span class="chapter-title">Practice: Design a Schema</span><span class="chapter-duration">45 min</span></div></a>
+                                            </div>
+                                            <a href="quiz.html?course=databases-intro&module=3" class="module-quiz"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>Database Design Quiz • 10 questions • 100 XP</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 4 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="4">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 4</span>
+                                                <h3 class="module-title">Advanced SQL</h3>
+                                                <span class="module-meta">6 lessons • 2 weeks</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;">
+                                            <p class="module-description">Master complex SQL queries and optimization.</p>
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=1" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">JOIN Operations</span><span class="chapter-duration">22 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=2" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Aggregate Functions</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=3" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">GROUP BY and HAVING</span><span class="chapter-duration">14 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=4" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Subqueries</span><span class="chapter-duration">18 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=5" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Indexes and Performance</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=4&chapter=6" class="chapter-item exercise"><div class="chapter-icon exercise"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></div><div class="chapter-info"><span class="chapter-title">Practice: Complex Queries</span><span class="chapter-duration">40 min</span></div></a>
+                                            </div>
+                                            <a href="quiz.html?course=databases-intro&module=4" class="module-quiz"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>Advanced SQL Quiz • 12 questions • 120 XP</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Module 5 -->
+                                    <div class="module-card card">
+                                        <div class="module-header" data-module="5">
+                                            <div class="module-info">
+                                                <span class="module-number">Module 5</span>
+                                                <h3 class="module-title">NoSQL Introduction</h3>
+                                                <span class="module-meta">4 lessons • 1 week</span>
+                                            </div>
+                                            <svg class="module-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+                                        </div>
+                                        <div class="module-content" style="display: none;">
+                                            <p class="module-description">Explore non-relational databases.</p>
+                                            <div class="chapter-list">
+                                                <a href="lesson.html?course=databases-intro&module=5&chapter=1" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">SQL vs NoSQL</span><span class="chapter-duration">14 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=5&chapter=2" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Document Databases</span><span class="chapter-duration">16 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=5&chapter=3" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">Introduction to Firebase</span><span class="chapter-duration">18 min</span></div></a>
+                                                <a href="lesson.html?course=databases-intro&module=5&chapter=4" class="chapter-item"><div class="chapter-icon video"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" /></svg></div><div class="chapter-info"><span class="chapter-title">When to Use NoSQL</span><span class="chapter-duration">12 min</span></div></a>
+                                            </div>
+                                            <a href="quiz.html?course=databases-intro&module=5" class="module-quiz"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg>NoSQL Quiz • 6 questions • 60 XP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="overview">
+                                <div class="overview-section">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="learning-outcomes">
+                                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-green)" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Understand database concepts and terminology</li>
+                                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-green)" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Write SQL queries to manipulate data</li>
+                                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-green)" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Design normalized database schemas</li>
+                                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-green)" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Understand relationships between tables</li>
+                                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-green)" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Work with both SQL and NoSQL databases</li>
+                                    </ul>
+                                </div>
+                                <div class="overview-section">
+                                    <h3>Prerequisites</h3>
+                                    <ul><li>Basic programming concepts helpful but not required</li></ul>
+                                </div>
+                                <div class="overview-section">
+                                    <h3>Course Description</h3>
+                                    <p>This comprehensive database course teaches you everything from basic concepts to advanced SQL queries. You'll learn to design efficient databases and work with both relational and NoSQL systems.</p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="reviews">
+                                <div class="reviews-header">
+                                    <div class="rating-summary">
+                                        <span class="rating-score">4.7</span>
+                                        <div class="rating-stars">★★★★★</div>
+                                        <span class="rating-count">198 reviews</span>
+                                    </div>
+                                </div>
+                                <div class="reviews-list">
+                                    <div class="review-card">
+                                        <div class="review-header">
+                                            <div class="avatar">R</div>
+                                            <div class="review-info"><span class="review-name">Rachel Green</span><span class="review-date">1 week ago</span></div>
+                                            <div class="review-rating">★★★★★</div>
+                                        </div>
+                                        <p class="review-text">Excellent SQL course! The hands-on exercises really helped me understand JOINs and complex queries. Now I feel confident working with databases.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="course-sidebar">
+                        <div class="sidebar-card card sticky">
+                            <div class="sidebar-progress">
+                                <h4>Your Progress</h4>
+                                <div class="progress-labeled">
+                                    <div class="progress"><div class="progress-bar" style="width: 0%"></div></div>
+                                    <span class="progress-value">0%</span>
+                                </div>
+                                <p class="progress-text">0 of 40 lessons completed</p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="sidebar-info">
+                                <div class="info-item"><span class="info-label">Difficulty</span><span class="info-value">Beginner</span></div>
+                                <div class="info-item"><span class="info-label">Duration</span><span class="info-value">8 weeks</span></div>
+                                <div class="info-item"><span class="info-label">Modules</span><span class="info-value">5 modules</span></div>
+                                <div class="info-item"><span class="info-label">Exercises</span><span class="info-value">10 SQL exercises</span></div>
+                                <div class="info-item"><span class="info-label">Certificate</span><span class="info-value">Yes, upon completion</span></div>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-lg">Start Learning</button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container"><div class="footer-simple"><p>&copy; 2026 Google ByteLearn. All rights reserved.</p></div></div>
+    </footer>
+
+    <script src="../../js/app.js"></script>
+    <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        document.querySelectorAll('.module-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const chevron = header.querySelector('.module-chevron');
+                const isOpen = content.style.display !== 'none';
+                content.style.display = isOpen ? 'none' : 'block';
+                chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html>

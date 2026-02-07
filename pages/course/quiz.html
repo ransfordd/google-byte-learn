@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge with quizzes on Google ByteLearn.">
+    <title>Quiz - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/pages/quiz.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="quiz-page">
+    <!-- Quiz Header -->
+    <header class="quiz-header">
+        <div class="quiz-header-left">
+            <a href="course-detail.html" class="btn btn-ghost btn-sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span class="hide-mobile">Exit Quiz</span>
+            </a>
+            <div class="quiz-info">
+                <span class="quiz-module">Module 1: Getting Started</span>
+                <h1 class="quiz-title">Module Quiz</h1>
+            </div>
+        </div>
+        <div class="quiz-header-right">
+            <div class="quiz-timer" id="quizTimer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span id="timerDisplay">10:00</span>
+            </div>
+            <div class="quiz-progress-indicator">
+                <span id="currentQuestion">1</span> / <span id="totalQuestions">5</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="progressFill" style="width: 20%"></div>
+    </div>
+
+    <!-- Quiz Content -->
+    <main class="quiz-container">
+        <div class="quiz-content" id="quizContent">
+            <!-- Question Card -->
+            <div class="question-card animate-fade-in" id="questionCard">
+                <div class="question-header">
+                    <span class="question-number">Question 1</span>
+                    <span class="question-points">+10 XP</span>
+                </div>
+                <h2 class="question-text" id="questionText">What is Python primarily known for?</h2>
+
+                <div class="options-list" id="optionsList">
+                    <label class="option-item">
+                        <input type="radio" name="answer" value="0">
+                        <span class="option-marker">A</span>
+                        <span class="option-text">Being the fastest programming language</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="answer" value="1">
+                        <span class="option-marker">B</span>
+                        <span class="option-text">Its simplicity and readability</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="answer" value="2">
+                        <span class="option-marker">C</span>
+                        <span class="option-text">Only being used for web development</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="answer" value="3">
+                        <span class="option-marker">D</span>
+                        <span class="option-text">Being difficult to learn</span>
+                    </label>
+                </div>
+
+                <!-- Feedback (shown after answering) -->
+                <div class="question-feedback hidden" id="questionFeedback">
+                    <div class="feedback-header correct">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        <span>Correct!</span>
+                    </div>
+                    <p class="feedback-explanation">Python is famous for its clean, readable syntax that makes it one of
+                        the easiest languages to learn while still being powerful enough for professional development.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Navigation -->
+        <div class="quiz-nav">
+            <button class="btn btn-ghost" id="prevBtn" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Previous
+            </button>
+            <button class="btn btn-primary" id="nextBtn">
+                Next
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- Results Modal -->
+    <div class="modal" id="resultsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-lg">
+            <div class="modal-content results-content">
+                <div class="results-header">
+                    <div class="results-icon" id="resultsIcon">🎉</div>
+                    <h2 id="resultsTitle">Great Job!</h2>
+                    <p id="resultsSubtitle">You've completed the Module 1 Quiz</p>
+                </div>
+
+                <div class="results-score">
+                    <div class="score-circle" id="scoreCircle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="score-bg" cx="50" cy="50" r="45" />
+                            <circle class="score-fill" cx="50" cy="50" r="45" id="scoreFill" />
+                        </svg>
+                        <div class="score-value">
+                            <span id="scorePercent">80</span>%
+                        </div>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-stat">
+                            <span class="stat-value" id="correctCount">4</span>
+                            <span class="stat-label">Correct</span>
+                        </div>
+                        <div class="score-stat">
+                            <span class="stat-value" id="incorrectCount">1</span>
+                            <span class="stat-label">Incorrect</span>
+                        </div>
+                        <div class="score-stat">
+                            <span class="stat-value" id="xpEarned">+40</span>
+                            <span class="stat-label">XP Earned</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-breakdown" id="resultsBreakdown">
+                    <h4>Question Review</h4>
+                    <div class="breakdown-list">
+                        <div class="breakdown-item correct">
+                            <span class="breakdown-num">1</span>
+                            <span class="breakdown-status">✓</span>
+                        </div>
+                        <div class="breakdown-item correct">
+                            <span class="breakdown-num">2</span>
+                            <span class="breakdown-status">✓</span>
+                        </div>
+                        <div class="breakdown-item incorrect">
+                            <span class="breakdown-num">3</span>
+                            <span class="breakdown-status">✗</span>
+                        </div>
+                        <div class="breakdown-item correct">
+                            <span class="breakdown-num">4</span>
+                            <span class="breakdown-status">✓</span>
+                        </div>
+                        <div class="breakdown-item correct">
+                            <span class="breakdown-num">5</span>
+                            <span class="breakdown-status">✓</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-secondary" id="reviewBtn">Review Answers</button>
+                    <button class="btn btn-primary" id="continueBtn">Continue Learning</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/app.js"></script>
+    <script>
+        // Quiz Data (would come from Firebase in production)
+        const quizData = {
+            title: "Module 1: Getting Started Quiz",
+            timeLimit: 600, // 10 minutes in seconds
+            questions: [
+                {
+                    question: "What is Python primarily known for?",
+                    options: [
+                        "Being the fastest programming language",
+                        "Its simplicity and readability",
+                        "Only being used for web development",
+                        "Being difficult to learn"
+                    ],
+                    correct: 1,
+                    explanation: "Python is famous for its clean, readable syntax that makes it one of the easiest languages to learn while still being powerful enough for professional development."
+                },
+                {
+                    question: "Who created Python?",
+                    options: [
+                        "James Gosling",
+                        "Brendan Eich",
+                        "Guido van Rossum",
+                        "Dennis Ritchie"
+                    ],
+                    correct: 2,
+                    explanation: "Python was created by Guido van Rossum and was first released in 1991."
+                },
+                {
+                    question: "Which of the following is NOT a valid Python data type?",
+                    options: [
+                        "int",
+                        "str",
+                        "char",
+                        "float"
+                    ],
+                    correct: 2,
+                    explanation: "Python doesn't have a 'char' data type. Single characters are stored as strings with length 1."
+                },
+                {
+                    question: "How do you print 'Hello, World!' in Python?",
+                    options: [
+                        "console.log('Hello, World!')",
+                        "System.out.println('Hello, World!')",
+                        "print('Hello, World!')",
+                        "echo 'Hello, World!'"
+                    ],
+                    correct: 2,
+                    explanation: "The print() function is used to output text in Python."
+                },
+                {
+                    question: "Which symbol is used for comments in Python?",
+                    options: [
+                        "//",
+                        "/* */",
+                        "#",
+                        "<!-- -->"
+                    ],
+                    correct: 2,
+                    explanation: "The hash symbol (#) is used for single-line comments in Python. Multi-line comments can use triple quotes."
+                }
+            ]
+        };
+
+        let currentQuestion = 0;
+        let answers = [];
+        let timeRemaining = quizData.timeLimit;
+        let timerInterval;
+
+        // Initialize quiz
+        function initQuiz() {
+            document.getElementById('totalQuestions').textContent = quizData.questions.length;
+            renderQuestion(currentQuestion);
+            startTimer();
+        }
+
+        // Render question
+        function renderQuestion(index) {
+            const q = quizData.questions[index];
+            document.getElementById('currentQuestion').textContent = index + 1;
+            document.getElementById('progressFill').style.width = `${((index + 1) / quizData.questions.length) * 100}%`;
+
+            const questionCard = document.getElementById('questionCard');
+            questionCard.classList.remove('animate-fade-in');
+            void questionCard.offsetWidth; // Trigger reflow
+            questionCard.classList.add('animate-fade-in');
+
+            document.querySelector('.question-number').textContent = `Question ${index + 1}`;
+            document.getElementById('questionText').textContent = q.question;
+
+            const optionsList = document.getElementById('optionsList');
+            optionsList.innerHTML = q.options.map((opt, i) => `
+        <label class="option-item ${answers[index] === i ? 'selected' : ''}">
+          <input type="radio" name="answer" value="${i}" ${answers[index] === i ? 'checked' : ''}>
+          <span class="option-marker">${String.fromCharCode(65 + i)}</span>
+          <span class="option-text">${opt}</span>
+        </label>
+      `).join('');
+
+            // Add click handlers
+            document.querySelectorAll('.option-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.option-item').forEach(i => i.classList.remove('selected'));
+                    item.classList.add('selected');
+                    answers[currentQuestion] = parseInt(item.querySelector('input').value);
+                });
+            });
+
+            // Update nav buttons
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').textContent = index === quizData.questions.length - 1 ? 'Submit' : 'Next';
+            document.getElementById('nextBtn').innerHTML = index === quizData.questions.length - 1
+                ? 'Submit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>'
+                : 'Next <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+
+            document.getElementById('questionFeedback').classList.add('hidden');
+        }
+
+        // Timer
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                const mins = Math.floor(timeRemaining / 60);
+                const secs = timeRemaining % 60;
+                document.getElementById('timerDisplay').textContent =
+                    `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        // Submit quiz
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            // Calculate score
+            let correct = 0;
+            quizData.questions.forEach((q, i) => {
+                if (answers[i] === q.correct) correct++;
+            });
+
+            const percent = Math.round((correct / quizData.questions.length) * 100);
+            const xp = correct * 10;
+
+            // Update results modal
+            document.getElementById('scorePercent').textContent = percent;
+            document.getElementById('correctCount').textContent = correct;
+            document.getElementById('incorrectCount').textContent = quizData.questions.length - correct;
+            document.getElementById('xpEarned').textContent = `+${xp}`;
+
+            // Update score circle
+            const circumference = 2 * Math.PI * 45;
+            const offset = circumference - (percent / 100) * circumference;
+            document.getElementById('scoreFill').style.strokeDasharray = circumference;
+            document.getElementById('scoreFill').style.strokeDashoffset = offset;
+
+            // Update icon and title based on score
+            if (percent >= 80) {
+                document.getElementById('resultsIcon').textContent = '🎉';
+                document.getElementById('resultsTitle').textContent = 'Excellent!';
+            } else if (percent >= 60) {
+                document.getElementById('resultsIcon').textContent = '👍';
+                document.getElementById('resultsTitle').textContent = 'Good Job!';
+            } else {
+                document.getElementById('resultsIcon').textContent = '📚';
+                document.getElementById('resultsTitle').textContent = 'Keep Learning!';
+            }
+
+            // Build breakdown
+            const breakdown = document.querySelector('.breakdown-list');
+            breakdown.innerHTML = quizData.questions.map((q, i) => `
+        <div class="breakdown-item ${answers[i] === q.correct ? 'correct' : 'incorrect'}">
+          <span class="breakdown-num">${i + 1}</span>
+          <span class="breakdown-status">${answers[i] === q.correct ? '✓' : '✗'}</span>
+        </div>
+      `).join('');
+
+            // Show modal
+            document.getElementById('resultsModal').classList.add('open');
+        }
+
+        // Navigation
+        document.getElementById('prevBtn')?.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion(currentQuestion);
+            }
+        });
+
+        document.getElementById('nextBtn')?.addEventListener('click', () => {
+            if (currentQuestion < quizData.questions.length - 1) {
+                currentQuestion++;
+                renderQuestion(currentQuestion);
+            } else {
+                submitQuiz();
+            }
+        });
+
+        // Results actions
+        document.getElementById('continueBtn')?.addEventListener('click', () => {
+            window.location.href = 'lesson.html';
+        });
+
+        document.getElementById('reviewBtn')?.addEventListener('click', () => {
+            document.getElementById('resultsModal').classList.remove('open');
+            currentQuestion = 0;
+            renderQuestion(0);
+        });
+
+        // Initialize
+        initQuiz();
+    </script>
+</body>
+
+</html>

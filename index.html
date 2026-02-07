@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Google ByteLearn - Master Computer Science with interactive courses, hands-on coding, and AI-powered learning support.">
+    <meta name="keywords"
+        content="computer science, programming, python, web development, AI, machine learning, online courses">
+    <title>Google ByteLearn - Learn Computer Science</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="page-layout">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header / Navigation -->
+    <header class="page-header">
+        <nav class="navbar container-2xl">
+            <!-- Brand -->
+            <a href="index.html" class="navbar-brand">
+                <svg class="navbar-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                    <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <span class="navbar-title">Byte<span>Learn</span></span>
+            </a>
+
+            <!-- Search (Desktop) -->
+            <div class="navbar-center hide-mobile">
+                <div class="navbar-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input type="search" class="search-input form-input"
+                        placeholder="Search courses, topics, or instructors..." aria-label="Search courses">
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navbar-nav hide-mobile">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/courses.html" class="nav-link">Courses</a>
+                <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+                <a href="pages/leaderboard.html" class="nav-link">Leaderboard</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="navbar-actions">
+                <a href="pages/auth/login.html" class="btn btn-outline auth-btn-login">Log In</a>
+                <a href="pages/auth/signup.html" class="btn btn-primary auth-btn-signup">Sign Up Free</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="btn btn-icon btn-ghost mobile-menu-toggle" aria-label="Toggle menu"
+                    id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="page-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Continuous Floating Elements -->
+            <div class="hero-floating-elements">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+                <div class="floating-shape shape-4"></div>
+                <div class="floating-shape shape-5"></div>
+                <div class="floating-shape shape-6"></div>
+                <div class="floating-code-tag tag-1"><code>&lt;/&gt;</code></div>
+                <div class="floating-code-tag tag-2"><code>{ }</code></div>
+                <div class="floating-code-tag tag-3"><code>01</code></div>
+            </div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content animate-fade-in-up">
+                        <span class="hero-badge badge badge-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
+                            Now with AI-Powered Learning
+                        </span>
+                        <h1 class="hero-title">Master <span class="text-gradient">Computer Science</span> with
+                            Interactive Learning</h1>
+                        <p class="hero-description">
+                            From Python basics to AI & Machine Learning — learn at your own pace with video lessons,
+                            hands-on coding exercises, and personalized AI assistance.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="pages/auth/signup.html" class="btn btn-primary btn-xl">
+                                Start Learning Free
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="pages/courses.html" class="btn btn-secondary btn-xl">
+                                Browse Courses
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <span class="hero-stat-value">5+</span>
+                                <span class="hero-stat-label">CS Courses</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value">100+</span>
+                                <span class="hero-stat-label">Video Lessons</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value">50+</span>
+                                <span class="hero-stat-label">Coding Exercises</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual animate-fade-in">
+                        <div class="hero-code-window">
+                            <div class="code-window-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">hello_world.py</span>
+                            </div>
+                            <pre class="code-window-content"><code><span class="code-comment"># Welcome to ByteLearn!</span>
+<span class="code-keyword">def</span> <span class="code-function">greet</span>(name):
+    <span class="code-keyword">return</span> <span class="code-string">f"Hello, {name}!"</span>
+
+<span class="code-keyword">print</span>(greet(<span class="code-string">"Future Developer"</span>))
+<span class="code-output"># Output: Hello, Future Developer!</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section features-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Why Learn with ByteLearn?</h2>
+                    <p class="section-subtitle">Everything you need to master computer science, all in one platform.</p>
+                </div>
+                <div class="features-grid grid grid-auto-fit-md">
+                    <div class="feature-card card hover-lift animate-fade-in-up">
+                        <div class="feature-icon" style="background: var(--blue-50); color: var(--google-blue);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7" />
+                                <rect x="1" y="5" width="15" height="14" rx="2" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Video Lessons</h3>
+                        <p class="feature-text">High-quality video tutorials from industry experts, covering every
+                            concept in depth.</p>
+                    </div>
+                    <div class="feature-card card hover-lift animate-fade-in-up" style="animation-delay: 100ms;">
+                        <div class="feature-icon" style="background: var(--green-50); color: var(--google-green);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Hands-on Coding</h3>
+                        <p class="feature-text">Practice directly in your browser with our integrated code editor. No
+                            setup needed.</p>
+                    </div>
+                    <div class="feature-card card hover-lift animate-fade-in-up" style="animation-delay: 200ms;">
+                        <div class="feature-icon" style="background: var(--yellow-50); color: var(--google-yellow);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">AI Assistant</h3>
+                        <p class="feature-text">Get instant help from our AI chatbot that explains concepts and debugs
+                            your code.</p>
+                    </div>
+                    <div class="feature-card card hover-lift animate-fade-in-up" style="animation-delay: 300ms;">
+                        <div class="feature-icon" style="background: var(--red-50); color: var(--google-red);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 20v-6M6 20V10M18 20V4" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Progress Tracking</h3>
+                        <p class="feature-text">Track your learning journey with detailed progress stats and achievement
+                            badges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="section courses-section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Explore Our Courses</h2>
+                        <p class="section-subtitle">Start your journey with our foundational computer science courses.
+                        </p>
+                    </div>
+                    <a href="pages/courses.html" class="btn btn-outline hide-mobile">View All Courses</a>
+                </div>
+                <div class="courses-grid grid grid-auto-fit-md">
+                    <!-- Course Card: Python -->
+                    <article class="course-card card card-clickable hover-lift" data-course="python-programming">
+                        <div class="course-image-wrapper">
+                            <img src="assets/images/courses/python.svg" alt="Python Programming" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg> 20 hours</span>
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg> 25 lessons</span>
+                            </div>
+                            <h3 class="card-title">Programming with Python</h3>
+                            <p class="card-text">Learn Python from scratch. Master variables, functions, OOP, and build
+                                real projects.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="pages/course/python-programming.html"
+                                class="btn btn-primary btn-block">Start Learning</a>
+                        </div>
+                    </article>
+
+                    <!-- Course Card: Web Programming -->
+                    <article class="course-card card card-clickable hover-lift" data-course="web-programming">
+                        <div class="course-image-wrapper">
+                            <img src="assets/images/courses/web.svg" alt="Web Programming" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg> 25 hours</span>
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg> 30 lessons</span>
+                            </div>
+                            <h3 class="card-title">Web Programming</h3>
+                            <p class="card-text">Master HTML, CSS, JavaScript. Build responsive websites and interactive
+                                web apps.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="pages/course/web-programming.html"
+                                class="btn btn-primary btn-block">Start Learning</a>
+                        </div>
+                    </article>
+
+                    <!-- Course Card: AI/ML -->
+                    <article class="course-card card card-clickable hover-lift" data-course="ai-machine-learning">
+                        <div class="course-image-wrapper">
+                            <img src="assets/images/courses/ai.svg" alt="AI & Machine Learning" class="card-image"
+                                loading="lazy">
+                            <span class="course-level badge badge-warning">Intermediate</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="course-meta">
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg> 30 hours</span>
+                                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg> 28 lessons</span>
+                            </div>
+                            <h3 class="card-title">AI & Machine Learning</h3>
+                            <p class="card-text">Dive into AI fundamentals, neural networks, and build your first ML
+                                models.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="pages/course/ai-machine-learning.html"
+                                class="btn btn-primary btn-block">Start Learning</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-8 show-mobile">
+                    <a href="pages/courses.html" class="btn btn-primary btn-lg">View All Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section how-it-works-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">How ByteLearn Works</h2>
+                    <p class="section-subtitle">A simple, effective learning path to master computer science.</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Choose Your Course</h3>
+                            <p>Pick from our carefully designed CS courses that match your skill level and interests.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Learn with Videos</h3>
+                            <p>Watch engaging video lessons with clear explanations and real-world examples.</p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Practice Coding</h3>
+                            <p>Apply what you learned with hands-on exercises in our built-in code editor.</p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Earn Badges</h3>
+                            <p>Complete quizzes, earn XP, unlock achievements, and track your progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gamification Section -->
+        <section class="section gamification-section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="two-column-layout items-center">
+                    <div class="gamification-content">
+                        <h2 class="section-title">Learn, Compete, Achieve</h2>
+                        <p class="section-text">
+                            ByteLearn makes learning fun with our gamification features. Earn XP, maintain learning
+                            streaks,
+                            collect badges, and compete on leaderboards.
+                        </p>
+                        <div class="gamification-features">
+                            <div class="gamification-feature">
+                                <div class="gamification-icon" style="background: var(--blue-50);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="var(--google-blue)" stroke-width="2">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>XP & Levels</h4>
+                                    <p>Earn experience points and level up as you complete lessons and quizzes.</p>
+                                </div>
+                            </div>
+                            <div class="gamification-feature">
+                                <div class="gamification-icon" style="background: var(--green-50);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="var(--google-green)" stroke-width="2">
+                                        <circle cx="12" cy="8" r="6" />
+                                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Badges & Achievements</h4>
+                                    <p>Unlock special badges for milestones like completing courses or streak records.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gamification-feature">
+                                <div class="gamification-icon" style="background: var(--yellow-50);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="var(--google-yellow)" stroke-width="2">
+                                        <path
+                                            d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Learning Streaks</h4>
+                                    <p>Maintain daily streaks and earn bonus XP for consistent learning habits.</p>
+                                </div>
+                            </div>
+                            <div class="gamification-feature">
+                                <div class="gamification-icon" style="background: var(--red-50);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="var(--google-red)" stroke-width="2">
+                                        <path d="M18 20V10M12 20V4M6 20v-6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Leaderboards</h4>
+                                    <p>Compete with learners worldwide and see where you rank on our leaderboards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gamification-visual">
+                        <div class="leaderboard-preview card">
+                            <div class="card-header">
+                                <h3 class="card-title">🏆 Top Learners This Week</h3>
+                            </div>
+                            <div class="leaderboard-list">
+                                <div class="leaderboard-item gold">
+                                    <span class="rank">1</span>
+                                    <div class="avatar">A</div>
+                                    <span class="name">Alex Chen</span>
+                                    <span class="xp">2,450 XP</span>
+                                </div>
+                                <div class="leaderboard-item silver">
+                                    <span class="rank">2</span>
+                                    <div class="avatar">M</div>
+                                    <span class="name">Maria Santos</span>
+                                    <span class="xp">2,180 XP</span>
+                                </div>
+                                <div class="leaderboard-item bronze">
+                                    <span class="rank">3</span>
+                                    <div class="avatar">J</div>
+                                    <span class="name">James Wilson</span>
+                                    <span class="xp">1,950 XP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to Start Your Coding Journey?</h2>
+                    <p>Join thousands of learners who are mastering computer science with ByteLearn. It's free to start!
+                    </p>
+                    <div class="cta-actions">
+                        <a href="pages/auth/signup.html" class="btn btn-primary btn-xl">Create Free Account</a>
+                        <a href="pages/courses.html" class="btn btn-secondary btn-xl">Explore Courses</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                            <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>ByteLearn</span>
+                    </a>
+                    <p class="footer-tagline">Master Computer Science with interactive learning.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="pages/course/python-programming.html">Python Programming</a></li>
+                        <li><a href="pages/course/web-programming.html">Web Programming</a></li>
+                        <li><a href="pages/course/ai-machine-learning.html">AI & Machine Learning</a>
+                        </li>
+                        <li><a href="pages/course/computer-fundamentals.html">Computer Fundamentals</a>
+                        </li>
+                        <li><a href="pages/course/databases-intro.html">Introduction to Databases</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="pages/dashboard.html">Dashboard</a></li>
+                        <li><a href="pages/leaderboard.html">Leaderboard</a></li>
+                        <li><a href="pages/achievements.html">Achievements</a></li>
+                        <li><a href="pages/classroom.html">Virtual Classroom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Google ByteLearn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="navbar-title">Byte<span>Learn</span></span>
+                <button class="btn btn-icon btn-ghost" id="closeMobileMenu" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <a href="pages/courses.html" class="mobile-menu-link">Explore Courses</a>
+                <a href="pages/leaderboard.html" class="mobile-menu-link">Leaderboard</a>
+                <a href="pages/auth/login.html" class="mobile-menu-link">Log In</a>
+                <a href="pages/auth/signup.html" class="btn btn-primary btn-block">Sign Up Free</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- AI Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <button class="chatbot-trigger btn btn-primary btn-icon" id="chatbotTrigger" aria-label="Open AI assistant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script>
+        // Hero Section Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Counter Animation for Stats
+            const statValues = document.querySelectorAll('.hero-stat-value');
+            
+            const animateCounter = (element) => {
+                const text = element.textContent;
+                const match = text.match(/(\d+)/);
+                if (!match) return;
+                
+                const target = parseInt(match[0]);
+                const suffix = text.replace(match[0], '');
+                const duration = 2000;
+                const startTime = performance.now();
+                
+                const update = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(target * easeOut);
+                    
+                    element.textContent = current + suffix;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                };
+                
+                requestAnimationFrame(update);
+            };
+
+            // Intersection Observer for counters
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statValues.forEach(stat => counterObserver.observe(stat));
+
+            // Code Window Typing Effect
+            const codeContent = document.querySelector('.code-window-content code');
+            if (codeContent) {
+                const originalHTML = codeContent.innerHTML;
+                codeContent.innerHTML = '';
+                
+                let i = 0;
+                const typeCode = () => {
+                    if (i < originalHTML.length) {
+                        // Handle HTML tags
+                        if (originalHTML[i] === '<') {
+                            const tagEnd = originalHTML.indexOf('>', i);
+                            codeContent.innerHTML += originalHTML.substring(i, tagEnd + 1);
+                            i = tagEnd + 1;
+                        } else {
+                            codeContent.innerHTML += originalHTML[i];
+                            i++;
+                        }
+                        setTimeout(typeCode, 15);
+                    }
+                };
+                
+                setTimeout(typeCode, 500);
+            }
+
+            // Button hover ripple effect
+            const primaryBtns = document.querySelectorAll('.hero-actions .btn-primary');
+            primaryBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    btn.style.setProperty('--ripple-x', x + 'px');
+                    btn.style.setProperty('--ripple-y', y + 'px');
+                });
+            });
+
+            // Parallax effect on scroll
+            const heroSection = document.querySelector('.hero-section');
+            const heroContent = document.querySelector('.hero-content');
+            const heroVisual = document.querySelector('.hero-visual');
+            
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroHeight = heroSection?.offsetHeight || 600;
+                
+                if (scrolled < heroHeight) {
+                    const opacity = 1 - (scrolled / heroHeight) * 0.5;
+                    const translateY = scrolled * 0.2;
+                    
+                    if (heroContent) {
+                        heroContent.style.opacity = opacity;
+                        heroContent.style.transform = `translateY(${translateY}px)`;
+                    }
+                    if (heroVisual) {
+                        heroVisual.style.transform = `translateY(${translateY * 0.5}px)`;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

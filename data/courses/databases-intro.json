@@ -1,0 +1,259 @@
+{
+    "id": "databases-intro",
+    "title": "Introduction to Databases",
+    "description": "Learn to store, manage, and query data. Master SQL and understand database design principles.",
+    "thumbnail": "/assets/images/courses/database.svg",
+    "level": "Beginner",
+    "duration": "8 weeks",
+    "totalLessons": 40,
+    "totalStudents": 7850,
+    "rating": 4.7,
+    "instructor": {
+        "name": "David Kim",
+        "title": "Database Engineer"
+    },
+    "tags": [
+        "SQL",
+        "Databases",
+        "Data Management",
+        "MySQL"
+    ],
+    "prerequisites": [
+        "Basic programming concepts helpful but not required"
+    ],
+    "learningOutcomes": [
+        "Understand database concepts and terminology",
+        "Write SQL queries to manipulate data",
+        "Design normalized database schemas",
+        "Understand relationships between tables",
+        "Work with both SQL and NoSQL databases"
+    ],
+    "modules": [
+        {
+            "id": "m1",
+            "title": "Database Fundamentals",
+            "description": "Understand what databases are and why we need them.",
+            "duration": "1 week",
+            "chapters": [
+                {
+                    "id": "m1-c1",
+                    "title": "What is a Database?",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m1-c2",
+                    "title": "Types of Databases",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m1-c3",
+                    "title": "Database Management Systems",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m1-c4",
+                    "title": "Setting Up Your Environment",
+                    "type": "video",
+                    "duration": "18 min"
+                }
+            ],
+            "quiz": {
+                "id": "m1-quiz",
+                "title": "Database Basics Quiz",
+                "questions": 6,
+                "xpReward": 60
+            }
+        },
+        {
+            "id": "m2",
+            "title": "SQL Basics",
+            "description": "Learn the fundamentals of SQL queries.",
+            "duration": "2 weeks",
+            "chapters": [
+                {
+                    "id": "m2-c1",
+                    "title": "SELECT Statements",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m2-c2",
+                    "title": "Filtering with WHERE",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m2-c3",
+                    "title": "Sorting with ORDER BY",
+                    "type": "video",
+                    "duration": "10 min"
+                },
+                {
+                    "id": "m2-c4",
+                    "title": "INSERT Statements",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m2-c5",
+                    "title": "UPDATE and DELETE",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m2-c6",
+                    "title": "Practice: Basic Queries",
+                    "type": "exercise",
+                    "duration": "30 min"
+                }
+            ],
+            "quiz": {
+                "id": "m2-quiz",
+                "title": "SQL Basics Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m3",
+            "title": "Database Design",
+            "description": "Learn to design efficient database schemas.",
+            "duration": "2 weeks",
+            "chapters": [
+                {
+                    "id": "m3-c1",
+                    "title": "Tables and Data Types",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m3-c2",
+                    "title": "Primary and Foreign Keys",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m3-c3",
+                    "title": "Relationships: One-to-One, One-to-Many",
+                    "type": "video",
+                    "duration": "20 min"
+                },
+                {
+                    "id": "m3-c4",
+                    "title": "Many-to-Many Relationships",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m3-c5",
+                    "title": "Normalization",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m3-c6",
+                    "title": "Practice: Design a Schema",
+                    "type": "exercise",
+                    "duration": "45 min"
+                }
+            ],
+            "quiz": {
+                "id": "m3-quiz",
+                "title": "Database Design Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m4",
+            "title": "Advanced SQL",
+            "description": "Master complex SQL queries and optimization.",
+            "duration": "2 weeks",
+            "chapters": [
+                {
+                    "id": "m4-c1",
+                    "title": "JOIN Operations",
+                    "type": "video",
+                    "duration": "22 min"
+                },
+                {
+                    "id": "m4-c2",
+                    "title": "Aggregate Functions",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m4-c3",
+                    "title": "GROUP BY and HAVING",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m4-c4",
+                    "title": "Subqueries",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m4-c5",
+                    "title": "Indexes and Performance",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m4-c6",
+                    "title": "Practice: Complex Queries",
+                    "type": "exercise",
+                    "duration": "40 min"
+                }
+            ],
+            "quiz": {
+                "id": "m4-quiz",
+                "title": "Advanced SQL Quiz",
+                "questions": 12,
+                "xpReward": 120
+            }
+        },
+        {
+            "id": "m5",
+            "title": "NoSQL Introduction",
+            "description": "Explore non-relational databases.",
+            "duration": "1 week",
+            "chapters": [
+                {
+                    "id": "m5-c1",
+                    "title": "SQL vs NoSQL",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m5-c2",
+                    "title": "Document Databases",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m5-c3",
+                    "title": "Introduction to Firebase",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m5-c4",
+                    "title": "When to Use NoSQL",
+                    "type": "video",
+                    "duration": "12 min"
+                }
+            ],
+            "quiz": {
+                "id": "m5-quiz",
+                "title": "NoSQL Quiz",
+                "questions": 6,
+                "xpReward": 60
+            }
+        }
+    ]
+}

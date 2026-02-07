@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/pages/lesson.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="lesson-page">
+    <!-- Top Bar -->
+    <header class="lesson-header">
+        <div class="lesson-header-left">
+            <a href="course-detail.html?id=python-programming" class="btn btn-ghost btn-sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span class="hide-mobile">Back to Course</span>
+            </a>
+            <div class="lesson-title-group">
+                <span class="lesson-module">Module 1: Getting Started</span>
+                <h1 class="lesson-current-title">Introduction to Python</h1>
+            </div>
+        </div>
+        <div class="lesson-header-right">
+            <span class="lesson-progress-text">3 of 25 lessons</span>
+            <button class="btn btn-icon btn-ghost" id="themeToggle" aria-label="Toggle theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="lesson-layout">
+        <!-- Sidebar / Chapter List -->
+        <aside class="lesson-sidebar" id="lessonSidebar">
+            <div class="sidebar-header">
+                <h3>Course Content</h3>
+                <button class="btn btn-icon btn-ghost sidebar-close" id="sidebarClose">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="sidebar-chapter-list">
+                <div class="sidebar-module">
+                    <div class="sidebar-module-header active">
+                        <span class="module-dot completed"></span>
+                        <span>Module 1: Getting Started</span>
+                    </div>
+                    <div class="sidebar-chapters">
+                        <a href="?module=1&chapter=1" class="sidebar-chapter active">
+                            <span class="chapter-status completed"></span>
+                            <span>Introduction to Python</span>
+                            <span class="chapter-type video"></span>
+                        </a>
+                        <a href="?module=1&chapter=2" class="sidebar-chapter">
+                            <span class="chapter-status completed"></span>
+                            <span>Installing Python & Setup</span>
+                            <span class="chapter-type video"></span>
+                        </a>
+                        <a href="?module=1&chapter=3" class="sidebar-chapter">
+                            <span class="chapter-status"></span>
+                            <span>Your First Python Program</span>
+                            <span class="chapter-type video"></span>
+                        </a>
+                        <a href="?module=1&chapter=4" class="sidebar-chapter">
+                            <span class="chapter-status"></span>
+                            <span>Practice: Hello World</span>
+                            <span class="chapter-type exercise"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-module">
+                    <div class="sidebar-module-header">
+                        <span class="module-dot"></span>
+                        <span>Module 2: Variables & Data Types</span>
+                    </div>
+                </div>
+                <div class="sidebar-module">
+                    <div class="sidebar-module-header">
+                        <span class="module-dot"></span>
+                        <span>Module 3: Control Flow</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-main">
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="video-container">
+                    <div class="video-player">
+                        <iframe id="videoPlayer" src="https://www.youtube.com/embed/x7X9w_GIm1s"
+                            title="Introduction to Python" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-controls">
+                        <button class="btn btn-ghost btn-sm" id="prevLesson">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="19 20 9 12 19 4 19 20" />
+                                <line x1="5" y1="19" x2="5" y2="5" />
+                            </svg>
+                            Previous
+                        </button>
+                        <button class="btn btn-ghost btn-sm" id="toggleSidebar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6" />
+                                <line x1="3" y1="12" x2="21" y2="12" />
+                                <line x1="3" y1="18" x2="21" y2="18" />
+                            </svg>
+                            Chapters
+                        </button>
+                        <button class="btn btn-primary btn-sm" id="nextLesson">
+                            Next Lesson
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="5 4 15 12 5 20 5 4" />
+                                <line x1="19" y1="5" x2="19" y2="19" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Tabs -->
+            <section class="content-section">
+                <div class="tabs">
+                    <button class="tab active" data-tab="notes">Notes</button>
+                    <button class="tab" data-tab="code">Code Editor</button>
+                    <button class="tab" data-tab="resources">Resources</button>
+                    <button class="tab" data-tab="discussion">Discussion</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Notes Tab -->
+                    <div class="tab-pane active" id="notes">
+                        <article class="lesson-notes">
+                            <h2>Introduction to Python</h2>
+                            <p>Python is a high-level, interpreted programming language known for its simplicity and
+                                readability. Created by Guido van Rossum in 1991, Python has become one of the most
+                                popular languages in the world.</p>
+
+                            <h3>Why Learn Python?</h3>
+                            <ul>
+                                <li><strong>Easy to Learn:</strong> Python has a clean, readable syntax that makes it
+                                    perfect for beginners.</li>
+                                <li><strong>Versatile:</strong> Used in web development, data science, AI, automation,
+                                    and more.</li>
+                                <li><strong>Large Community:</strong> Extensive documentation and community support.
+                                </li>
+                                <li><strong>High Demand:</strong> Python developers are in high demand across
+                                    industries.</li>
+                            </ul>
+
+                            <h3>Python Applications</h3>
+                            <div class="info-cards">
+                                <div class="info-card">
+                                    <h4>🌐 Web Development</h4>
+                                    <p>Build web applications with Django and Flask frameworks.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>📊 Data Science</h4>
+                                    <p>Analyze data with Pandas, NumPy, and visualization libraries.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>🤖 AI & ML</h4>
+                                    <p>Create machine learning models with TensorFlow and PyTorch.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h4>⚙️ Automation</h4>
+                                    <p>Automate repetitive tasks and build scripts.</p>
+                                </div>
+                            </div>
+
+                            <h3>Your First Python Code</h3>
+                            <p>Let's look at the classic "Hello, World!" program in Python:</p>
+                            <pre><code class="language-python">print("Hello, World!")</code></pre>
+                            <p>That's it! Just one line. Compare this to other languages where you might need multiple
+                                lines of boilerplate code.</p>
+
+                            <div class="lesson-callout">
+                                <h4>💡 Key Takeaway</h4>
+                                <p>Python's simplicity makes it an excellent choice for beginners, while its power and
+                                    flexibility make it valuable for professionals.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Code Editor Tab -->
+                    <div class="tab-pane" id="code">
+                        <div class="code-editor-section">
+                            <div class="editor-toolbar">
+                                <span class="editor-language">Python</span>
+                                <div class="editor-actions">
+                                    <button class="btn btn-ghost btn-sm" id="resetCode">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                                            <path d="M22 11.5A10 10 0 003.2 7.2M2 12.5a10 10 0 0018.8 4.2" />
+                                        </svg>
+                                        Reset
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" id="runCode">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polygon points="5 3 19 12 5 21 5 3" />
+                                        </svg>
+                                        Run Code
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="editor-container">
+                                <textarea id="codeEditor" class="code-textarea" placeholder="# Write your Python code here...
+print('Hello, World!')
+
+# Try modifying this code and click Run!
+name = 'ByteLearn'
+print(f'Welcome to {name}!')">
+# Write your Python code here...
+print('Hello, World!')
+
+# Try modifying this code and click Run!
+name = 'ByteLearn'
+print(f'Welcome to {name}!')</textarea>
+                            </div>
+                            <div class="output-section">
+                                <div class="output-header">
+                                    <span>Output</span>
+                                    <button class="btn btn-ghost btn-sm" id="clearOutput">Clear</button>
+                                </div>
+                                <pre class="output-content" id="outputContent">Click "Run Code" to see output...</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources Tab -->
+                    <div class="tab-pane" id="resources">
+                        <div class="resources-section">
+                            <h3>Additional Resources</h3>
+                            <div class="resource-list">
+                                <a href="https://www.python.org/doc/" target="_blank" class="resource-item">
+                                    <div class="resource-icon">📄</div>
+                                    <div class="resource-info">
+                                        <span class="resource-title">Python Official Documentation</span>
+                                        <span class="resource-desc">Official Python language documentation and
+                                            tutorials.</span>
+                                    </div>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <div class="resource-icon">📥</div>
+                                    <div class="resource-info">
+                                        <span class="resource-title">Lesson Slides (PDF)</span>
+                                        <span class="resource-desc">Download the presentation slides for this
+                                            lesson.</span>
+                                    </div>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <div class="resource-icon">💻</div>
+                                    <div class="resource-info">
+                                        <span class="resource-title">Starter Code</span>
+                                        <span class="resource-desc">GitHub repository with starter code for
+                                            exercises.</span>
+                                    </div>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discussion Tab -->
+                    <div class="tab-pane" id="discussion">
+                        <div class="discussion-section">
+                            <div class="discussion-header">
+                                <h3>Discussion</h3>
+                                <span class="discussion-count">12 comments</span>
+                            </div>
+                            <form class="comment-form" id="commentForm">
+                                <textarea class="form-input" placeholder="Ask a question or share your thoughts..."
+                                    rows="3"></textarea>
+                                <button type="submit" class="btn btn-primary">Post Comment</button>
+                            </form>
+                            <div class="comments-list">
+                                <div class="comment">
+                                    <div class="comment-header">
+                                        <div class="avatar">J</div>
+                                        <div class="comment-info">
+                                            <span class="comment-author">Jane Smith</span>
+                                            <span class="comment-time">2 days ago</span>
+                                        </div>
+                                    </div>
+                                    <p class="comment-text">This is a great introduction! I've tried learning Python
+                                        before but this explanation makes it much clearer.</p>
+                                    <div class="comment-actions">
+                                        <button class="btn btn-ghost btn-sm">Reply</button>
+                                        <button class="btn btn-ghost btn-sm">👍 5</button>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="comment-header">
+                                        <div class="avatar">M</div>
+                                        <div class="comment-info">
+                                            <span class="comment-author">Mike Chen</span>
+                                            <span class="comment-time">1 week ago</span>
+                                        </div>
+                                    </div>
+                                    <p class="comment-text">Can someone explain how Python differs from JavaScript in
+                                        terms of syntax?</p>
+                                    <div class="comment-actions">
+                                        <button class="btn btn-ghost btn-sm">Reply</button>
+                                        <button class="btn btn-ghost btn-sm">👍 3</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mark Complete Footer -->
+            <footer class="lesson-footer">
+                <div class="lesson-footer-content">
+                    <div class="completion-check">
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input" id="markComplete">
+                            <span class="form-check-label">Mark as complete</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" id="continueBtn">
+                        Continue to Next Lesson
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-trigger btn btn-primary btn-icon" id="chatTrigger" aria-label="Ask AI">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+        </button>
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <h4>AI Assistant</h4>
+                <button class="btn btn-icon btn-ghost" id="chatClose">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hi! I'm your AI learning assistant. Ask me anything about this lesson or Python in general!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <form class="chat-input" id="chatForm">
+                <input type="text" class="form-input" id="chatInput" placeholder="Ask a question...">
+                <button type="submit" class="btn btn-primary btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/app.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tabs .tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tabs .tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Sidebar toggle
+        document.getElementById('toggleSidebar')?.addEventListener('click', () => {
+            document.getElementById('lessonSidebar').classList.toggle('open');
+        });
+
+        document.getElementById('sidebarClose')?.addEventListener('click', () => {
+            document.getElementById('lessonSidebar').classList.remove('open');
+        });
+
+        // Module accordion in sidebar
+        document.querySelectorAll('.sidebar-module-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                const chapters = header.nextElementSibling;
+                if (chapters) {
+                    chapters.style.display = header.classList.contains('active') ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Chat widget toggle
+        document.getElementById('chatTrigger')?.addEventListener('click', () => {
+            document.getElementById('chatPanel').classList.add('open');
+        });
+
+        document.getElementById('chatClose')?.addEventListener('click', () => {
+            document.getElementById('chatPanel').classList.remove('open');
+        });
+
+        // Simple chat functionality (placeholder)
+        document.getElementById('chatForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            const messagesEl = document.getElementById('chatMessages');
+
+            // Add user message
+            messagesEl.innerHTML += `
+        <div class="chat-message user">
+          <div class="message-content"><p>${message}</p></div>
+        </div>
+      `;
+
+            // Add bot response (placeholder)
+            setTimeout(() => {
+                messagesEl.innerHTML += `
+          <div class="chat-message bot">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+              <p>I understand you're asking about "${message}". This is a placeholder response. In the full version, I would provide helpful information about Python and this lesson!</p>
+            </div>
+          </div>
+        `;
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+            }, 500);
+
+            input.value = '';
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+        });
+
+        // Code editor - Run code (simulated)
+        document.getElementById('runCode')?.addEventListener('click', () => {
+            const code = document.getElementById('codeEditor').value;
+            const output = document.getElementById('outputContent');
+
+            // Simple simulation - in production, this would call a backend
+            try {
+                // Extract print statements (very basic simulation)
+                const printRegex = /print\(['"](.*?)['"]\)/g;
+                const fstringRegex = /print\(f['"](.*?)['"]\)/g;
+                let matches = [];
+                let match;
+
+                while ((match = printRegex.exec(code)) !== null) {
+                    matches.push(match[1]);
+                }
+
+                if (matches.length > 0) {
+                    output.textContent = matches.join('\n');
+                    output.classList.add('success');
+                } else {
+                    output.textContent = '(No output - try adding print() statements)';
+                }
+            } catch (e) {
+                output.textContent = 'Error: ' + e.message;
+                output.classList.add('error');
+            }
+        });
+
+        document.getElementById('resetCode')?.addEventListener('click', () => {
+            document.getElementById('codeEditor').value = `# Write your Python code here...
+print('Hello, World!')
+
+# Try modifying this code and click Run!
+name = 'ByteLearn'
+print(f'Welcome to {name}!')`;
+        });
+
+        document.getElementById('clearOutput')?.addEventListener('click', () => {
+            document.getElementById('outputContent').textContent = 'Click "Run Code" to see output...';
+        });
+
+        // Theme toggle
+        document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+{
+  "id": "python-programming",
+  "title": "Programming with Python",
+  "description": "Master Python from basics to advanced concepts. Learn variables, data structures, OOP, and build real projects.",
+  "thumbnail": "/assets/images/courses/python.svg",
+  "level": "Beginner",
+  "duration": "8 weeks",
+  "totalLessons": 45,
+  "totalStudents": 12450,
+  "rating": 4.8,
+  "instructor": {
+    "name": "Dr. Sarah Chen",
+    "avatar": "/assets/images/instructors/sarah.jpg",
+    "title": "Senior Python Developer"
+  },
+  "tags": ["Python", "Programming", "Beginner Friendly"],
+  "prerequisites": ["Basic computer skills", "No prior programming experience required"],
+  "learningOutcomes": [
+    "Write clean, efficient Python code",
+    "Work with data structures like lists, dictionaries, and sets",
+    "Understand object-oriented programming concepts",
+    "Build practical projects from scratch",
+    "Debug and troubleshoot Python programs"
+  ],
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Getting Started with Python",
+      "description": "Set up your development environment and write your first Python program.",
+      "duration": "1 week",
+      "chapters": [
+        {
+          "id": "m1-c1",
+          "title": "Introduction to Python",
+          "type": "video",
+          "duration": "12 min",
+          "videoUrl": "https://www.youtube.com/embed/x7X9w_GIm1s",
+          "content": "Python is a high-level, interpreted programming language known for its simplicity and readability...",
+          "completed": false
+        },
+        {
+          "id": "m1-c2",
+          "title": "Installing Python & IDE Setup",
+          "type": "video",
+          "duration": "15 min",
+          "videoUrl": "https://www.youtube.com/embed/YYXdXT2l-Gg",
+          "content": "Learn how to install Python and set up VS Code for development...",
+          "completed": false
+        },
+        {
+          "id": "m1-c3",
+          "title": "Your First Python Program",
+          "type": "video",
+          "duration": "10 min",
+          "videoUrl": "https://www.youtube.com/embed/kqtD5dpn9C8",
+          "content": "Write and run your first Hello World program in Python...",
+          "completed": false
+        },
+        {
+          "id": "m1-c4",
+          "title": "Practice: Hello World",
+          "type": "exercise",
+          "duration": "15 min",
+          "starterCode": "# Write a program that prints 'Hello, World!'\n",
+          "solution": "print('Hello, World!')",
+          "completed": false
+        }
+      ],
+      "quiz": {
+        "id": "m1-quiz",
+        "title": "Module 1 Quiz",
+        "questions": 5,
+        "passingScore": 60,
+        "xpReward": 50
+      }
+    },
+    {
+      "id": "m2",
+      "title": "Variables & Data Types",
+      "description": "Learn about Python's built-in data types and how to work with variables.",
+      "duration": "1.5 weeks",
+      "chapters": [
+        {
+          "id": "m2-c1",
+          "title": "Variables and Assignment",
+          "type": "video",
+          "duration": "14 min",
+          "videoUrl": "https://www.youtube.com/embed/cQT33yu9pY8",
+          "content": "Variables are containers for storing data values...",
+          "completed": false
+        },
+        {
+          "id": "m2-c2",
+          "title": "Numbers: Integers and Floats",
+          "type": "video",
+          "duration": "12 min",
+          "videoUrl": "https://www.youtube.com/embed/khKv-8q7YmY",
+          "content": "Python supports various numeric types...",
+          "completed": false
+        },
+        {
+          "id": "m2-c3",
+          "title": "Strings and String Methods",
+          "type": "video",
+          "duration": "18 min",
+          "videoUrl": "https://www.youtube.com/embed/k9TUPpGqYTo",
+          "content": "Strings are sequences of characters enclosed in quotes...",
+          "completed": false
+        },
+        {
+          "id": "m2-c4",
+          "title": "Practice: Data Types",
+          "type": "exercise",
+          "duration": "20 min",
+          "completed": false
+        }
+      ],
+      "quiz": {
+        "id": "m2-quiz",
+        "title": "Module 2 Quiz",
+        "questions": 8,
+        "passingScore": 60,
+        "xpReward": 80
+      }
+    },
+    {
+      "id": "m3",
+      "title": "Control Flow",
+      "description": "Master conditional statements and loops to control program execution.",
+      "duration": "1.5 weeks",
+      "chapters": [
+        {
+          "id": "m3-c1",
+          "title": "If, Elif, Else Statements",
+          "type": "video",
+          "duration": "16 min",
+          "completed": false
+        },
+        {
+          "id": "m3-c2",
+          "title": "For Loops",
+          "type": "video",
+          "duration": "14 min",
+          "completed": false
+        },
+        {
+          "id": "m3-c3",
+          "title": "While Loops",
+          "type": "video",
+          "duration": "12 min",
+          "completed": false
+        },
+        {
+          "id": "m3-c4",
+          "title": "Loop Control: Break and Continue",
+          "type": "video",
+          "duration": "10 min",
+          "completed": false
+        },
+        {
+          "id": "m3-c5",
+          "title": "Practice: Control Flow",
+          "type": "exercise",
+          "duration": "25 min",
+          "completed": false
+        }
+      ],
+      "quiz": {
+        "id": "m3-quiz",
+        "title": "Module 3 Quiz",
+        "questions": 10,
+        "passingScore": 60,
+        "xpReward": 100
+      }
+    },
+    {
+      "id": "m4",
+      "title": "Functions",
+      "description": "Learn to write reusable code with functions and understand scope.",
+      "duration": "1 week",
+      "chapters": [
+        {
+          "id": "m4-c1",
+          "title": "Defining Functions",
+          "type": "video",
+          "duration": "15 min",
+          "completed": false
+        },
+        {
+          "id": "m4-c2",
+          "title": "Parameters and Arguments",
+          "type": "video",
+          "duration": "12 min",
+          "completed": false
+        },
+        {
+          "id": "m4-c3",
+          "title": "Return Values",
+          "type": "video",
+          "duration": "10 min",
+          "completed": false
+        },
+        {
+          "id": "m4-c4",
+          "title": "Scope and Lifetime",
+          "type": "video",
+          "duration": "14 min",
+          "completed": false
+        },
+        {
+          "id": "m4-c5",
+          "title": "Practice: Functions",
+          "type": "exercise",
+          "duration": "30 min",
+          "completed": false
+        }
+      ],
+      "quiz": {
+        "id": "m4-quiz",
+        "title": "Module 4 Quiz",
+        "questions": 8,
+        "passingScore": 60,
+        "xpReward": 80
+      }
+    },
+    {
+      "id": "m5",
+      "title": "Data Structures",
+      "description": "Work with lists, tuples, dictionaries, and sets.",
+      "duration": "2 weeks",
+      "chapters": [
+        {
+          "id": "m5-c1",
+          "title": "Lists and List Methods",
+          "type": "video",
+          "duration": "18 min",
+          "completed": false
+        },
+        {
+          "id": "m5-c2",
+          "title": "Tuples",
+          "type": "video",
+          "duration": "10 min",
+          "completed": false
+        },
+        {
+          "id": "m5-c3",
+          "title": "Dictionaries",
+          "type": "video",
+          "duration": "16 min",
+          "completed": false
+        },
+        {
+          "id": "m5-c4",
+          "title": "Sets",
+          "type": "video",
+          "duration": "12 min",
+          "completed": false
+        },
+        {
+          "id": "m5-c5",
+          "title": "List Comprehensions",
+          "type": "video",
+          "duration": "14 min",
+          "completed": false
+        },
+        {
+          "id": "m5-c6",
+          "title": "Practice: Data Structures",
+          "type": "exercise",
+          "duration": "35 min",
+          "completed": false
+        }
+      ],
+      "quiz": {
+        "id": "m5-quiz",
+        "title": "Module 5 Quiz",
+        "questions": 12,
+        "passingScore": 60,
+        "xpReward": 120
+      }
+    }
+  ]
+}

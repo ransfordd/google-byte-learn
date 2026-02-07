@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Create your free Google ByteLearn account and start learning computer science today.">
+    <title>Sign Up - Google ByteLearn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/pages/auth.css">
+
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <!-- Left Side - Branding -->
+        <div class="auth-branding">
+            <div class="auth-branding-content">
+                <a href="../../index.html" class="auth-logo">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                        <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>ByteLearn</span>
+                </a>
+                <h1 class="auth-headline">Start Learning Today!</h1>
+                <p class="auth-subheadline">Join thousands of learners mastering computer science.</p>
+
+                <div class="auth-features">
+                    <div class="auth-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        <span>5 curated CS courses to get you started</span>
+                    </div>
+                    <div class="auth-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        <span>Built-in code editor for hands-on practice</span>
+                    </div>
+                    <div class="auth-feature">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="8" r="6" />
+                            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                        </svg>
+                        <span>Earn badges and compete on leaderboards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Signup Form -->
+        <div class="auth-form-section">
+            <div class="auth-form-container animate-fade-in-up">
+                <div class="auth-form-header">
+                    <h2>Create Account</h2>
+                    <p>Sign up to start your learning journey</p>
+                </div>
+
+                <form id="signupForm" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label required">Full Name</label>
+                        <div class="input-group">
+                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required
+                                autocomplete="name">
+                        </div>
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label required">Email</label>
+                        <div class="input-group">
+                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
+                                required autocomplete="email">
+                        </div>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label required">Password</label>
+                        <div class="input-group">
+                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0110 0v4" />
+                            </svg>
+                            <input type="password" id="password" name="password" class="form-input"
+                                placeholder="Min 6 characters" required autocomplete="new-password">
+                            <button type="button" class="input-icon-right password-toggle"
+                                aria-label="Toggle password visibility">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="form-hint">Must be at least 6 characters</span>
+                        <span class="form-error" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-check">
+                            <input type="checkbox" class="form-check-input" name="terms" id="terms" required>
+                            <span class="form-check-label">I agree to the <a href="#">Terms of Service</a> and <a
+                                    href="#">Privacy Policy</a></span>
+                        </label>
+                        <span class="form-error" id="termsError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="signupBtn">
+                            Create Account
+                        </button>
+                    </div>
+
+                    <div class="form-error form-error-general" id="generalError"></div>
+                </form>
+
+                <div class="divider-text">or sign up with</div>
+
+                <div class="social-login">
+                    <button type="button" class="btn btn-secondary btn-social" id="googleSignupBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#4285F4"
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                            <path fill="#34A853"
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path fill="#FBBC05"
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                            <path fill="#EA4335"
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                        </svg>
+                        Google
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-social" id="githubSignupBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Already have an account? <a href="login.html">Log in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="../../js/firebase-config.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script>
+        initFirebase();
+
+        const signupForm = document.getElementById('signupForm');
+        const signupBtn = document.getElementById('signupBtn');
+        const generalError = document.getElementById('generalError');
+
+        document.querySelector('.password-toggle')?.addEventListener('click', function () {
+            const input = document.getElementById('password');
+            input.type = input.type === 'password' ? 'text' : 'password';
+        });
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const terms = document.getElementById('terms').checked;
+
+            generalError.textContent = '';
+            document.querySelectorAll('.form-input').forEach(el => el.classList.remove('error'));
+
+            if (!name || !email || !password) {
+                generalError.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            if (!terms) {
+                generalError.textContent = 'Please accept the Terms of Service.';
+                return;
+            }
+
+            if (password.length < 6) {
+                generalError.textContent = 'Password must be at least 6 characters.';
+                return;
+            }
+
+            signupBtn.disabled = true;
+            signupBtn.innerHTML = '<span class="spinner spinner-sm"></span> Creating account...';
+
+            const result = await Auth.signUp(email, password, name);
+
+            if (result.success) {
+                window.location.href = '../dashboard.html';
+            } else {
+                generalError.textContent = result.error;
+                signupBtn.disabled = false;
+                signupBtn.textContent = 'Create Account';
+            }
+        });
+
+        document.getElementById('googleSignupBtn')?.addEventListener('click', async () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            try {
+                const result = await firebase.auth().signInWithPopup(provider);
+                if (result.user) {
+                    const doc = await firebase.firestore().collection('users').doc(result.user.uid).get();
+                    if (!doc.exists) {
+                        await Auth.createUserProfile(result.user.uid, {
+                            displayName: result.user.displayName,
+                            email: result.user.email,
+                            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                            profile: { avatar: result.user.photoURL, bio: '' },
+                            progress: {},
+                            gamification: { xp: 0, level: 1, badges: [], streak: 0 },
+                            settings: { notifications: true, theme: 'light' },
+                        });
+                    }
+                    window.location.href = '../dashboard.html';
+                }
+            } catch (error) {
+                generalError.textContent = Auth.getErrorMessage(error.code);
+            }
+        });
+    </script>
+</body>
+
+</html>

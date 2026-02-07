@@ -1,0 +1,235 @@
+{
+    "id": "computer-fundamentals",
+    "title": "Computer Fundamentals",
+    "description": "Understand how computers work from hardware to software. Learn binary, logic, and problem-solving.",
+    "thumbnail": "/assets/images/courses/computer.svg",
+    "level": "Beginner",
+    "duration": "6 weeks",
+    "totalLessons": 35,
+    "totalStudents": 15230,
+    "rating": 4.6,
+    "instructor": {
+        "name": "Prof. Maria Santos",
+        "title": "Computer Science Professor"
+    },
+    "tags": [
+        "Computer Science",
+        "Hardware",
+        "Software",
+        "Beginner"
+    ],
+    "prerequisites": [
+        "No prior knowledge required"
+    ],
+    "learningOutcomes": [
+        "Understand computer hardware components",
+        "Learn how operating systems work",
+        "Understand binary and number systems",
+        "Learn basic problem-solving techniques",
+        "Understand networks and the internet"
+    ],
+    "modules": [
+        {
+            "id": "m1",
+            "title": "Introduction to Computers",
+            "description": "Learn what computers are and how they evolved.",
+            "duration": "1 week",
+            "chapters": [
+                {
+                    "id": "m1-c1",
+                    "title": "History of Computing",
+                    "type": "video",
+                    "duration": "15 min"
+                },
+                {
+                    "id": "m1-c2",
+                    "title": "Types of Computers",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m1-c3",
+                    "title": "How Computers Process Information",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m1-c4",
+                    "title": "Input, Process, Output",
+                    "type": "video",
+                    "duration": "10 min"
+                }
+            ],
+            "quiz": {
+                "id": "m1-quiz",
+                "title": "Computer Basics Quiz",
+                "questions": 6,
+                "xpReward": 60
+            }
+        },
+        {
+            "id": "m2",
+            "title": "Hardware Components",
+            "description": "Explore the physical parts of a computer.",
+            "duration": "1.5 weeks",
+            "chapters": [
+                {
+                    "id": "m2-c1",
+                    "title": "The CPU - Brain of the Computer",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m2-c2",
+                    "title": "Memory: RAM vs Storage",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m2-c3",
+                    "title": "Input Devices",
+                    "type": "video",
+                    "duration": "10 min"
+                },
+                {
+                    "id": "m2-c4",
+                    "title": "Output Devices",
+                    "type": "video",
+                    "duration": "10 min"
+                },
+                {
+                    "id": "m2-c5",
+                    "title": "Motherboard and Connections",
+                    "type": "video",
+                    "duration": "12 min"
+                }
+            ],
+            "quiz": {
+                "id": "m2-quiz",
+                "title": "Hardware Quiz",
+                "questions": 8,
+                "xpReward": 80
+            }
+        },
+        {
+            "id": "m3",
+            "title": "Software & Operating Systems",
+            "description": "Understand the software that runs computers.",
+            "duration": "1 week",
+            "chapters": [
+                {
+                    "id": "m3-c1",
+                    "title": "System vs Application Software",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m3-c2",
+                    "title": "Operating Systems Overview",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m3-c3",
+                    "title": "File Systems",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m3-c4",
+                    "title": "Software Installation and Updates",
+                    "type": "video",
+                    "duration": "10 min"
+                }
+            ],
+            "quiz": {
+                "id": "m3-quiz",
+                "title": "Software Quiz",
+                "questions": 6,
+                "xpReward": 60
+            }
+        },
+        {
+            "id": "m4",
+            "title": "Binary & Number Systems",
+            "description": "Learn how computers represent data.",
+            "duration": "1.5 weeks",
+            "chapters": [
+                {
+                    "id": "m4-c1",
+                    "title": "Understanding Binary",
+                    "type": "video",
+                    "duration": "18 min"
+                },
+                {
+                    "id": "m4-c2",
+                    "title": "Binary Arithmetic",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m4-c3",
+                    "title": "Hexadecimal",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m4-c4",
+                    "title": "How Text is Encoded",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m4-c5",
+                    "title": "Practice: Binary Conversions",
+                    "type": "exercise",
+                    "duration": "25 min"
+                }
+            ],
+            "quiz": {
+                "id": "m4-quiz",
+                "title": "Number Systems Quiz",
+                "questions": 10,
+                "xpReward": 100
+            }
+        },
+        {
+            "id": "m5",
+            "title": "Networks & the Internet",
+            "description": "Understand how computers communicate.",
+            "duration": "1 week",
+            "chapters": [
+                {
+                    "id": "m5-c1",
+                    "title": "What is a Network?",
+                    "type": "video",
+                    "duration": "12 min"
+                },
+                {
+                    "id": "m5-c2",
+                    "title": "How the Internet Works",
+                    "type": "video",
+                    "duration": "16 min"
+                },
+                {
+                    "id": "m5-c3",
+                    "title": "IP Addresses and DNS",
+                    "type": "video",
+                    "duration": "14 min"
+                },
+                {
+                    "id": "m5-c4",
+                    "title": "Internet Security Basics",
+                    "type": "video",
+                    "duration": "15 min"
+                }
+            ],
+            "quiz": {
+                "id": "m5-quiz",
+                "title": "Networks Quiz",
+                "questions": 8,
+                "xpReward": 80
+            }
+        }
+    ]
+}
