@@ -700,8 +700,98 @@
                     }
                 }
             });
+
+            // Scroll Reveal Animation for all sections
+            const revealElements = document.querySelectorAll('.feature-card, .course-card, .step-card, .gamification-feature');
+            
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Leaderboard XP counter animation
+            const leaderboardItems = document.querySelectorAll('.leaderboard-item .xp');
+            const xpObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const text = el.textContent;
+                        const match = text.match(/[\d,]+/);
+                        if (match) {
+                            const target = parseInt(match[0].replace(',', ''));
+                            let current = 0;
+                            const duration = 1500;
+                            const startTime = performance.now();
+                            
+                            const animate = (currentTime) => {
+                                const elapsed = currentTime - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                current = Math.floor(target * progress);
+                                el.textContent = current.toLocaleString() + ' XP';
+                                if (progress < 1) requestAnimationFrame(animate);
+                            };
+                            requestAnimationFrame(animate);
+                        }
+                        xpObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            leaderboardItems.forEach(item => xpObserver.observe(item));
+
+            // CTA Section pulse effect
+            const ctaCard = document.querySelector('.cta-card');
+            if (ctaCard) {
+                ctaCard.addEventListener('mouseenter', () => {
+                    ctaCard.style.transform = 'scale(1.02)';
+                    ctaCard.style.boxShadow = '0 25px 50px rgba(66, 133, 244, 0.3)';
+                });
+                ctaCard.addEventListener('mouseleave', () => {
+                    ctaCard.style.transform = 'scale(1)';
+                    ctaCard.style.boxShadow = 'none';
+                });
+            }
+
+            // Course card click navigation
+            document.querySelectorAll('.course-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('a')) {
+                        const link = card.querySelector('a.btn');
+                        if (link) link.click();
+                    }
+                });
+            });
+
+            // Feature card tooltip on hover
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.querySelector('.feature-title')?.textContent;
+                    if (title) {
+                        card.style.animation = 'none';
+                        card.offsetHeight; // Trigger reflow
+                        card.style.animation = 'pulse-once 0.3s ease';
+                    }
+                });
+            });
         });
     </script>
+    <style>
+        @keyframes pulse-once {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .cta-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
 </body>
 
 </html>

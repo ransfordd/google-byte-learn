@@ -408,3 +408,202 @@
     font-weight: var(--font-medium);
     font-size: var(--text-sm);
 }
+
+/* ===== COURSE NOTES / READING CONTENT ===== */
+.course-notes-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+.module-reading {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.module-reading-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-5) var(--space-6);
+    background: linear-gradient(135deg, var(--blue-50) 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.module-reading-header:hover {
+    background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-50) 100%);
+}
+
+.module-reading-header .reading-module-num {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    font-weight: var(--font-bold);
+    font-size: var(--text-sm);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.module-reading-header h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    margin: 0;
+    flex: 1;
+}
+
+.module-reading-header .reading-chevron {
+    transition: transform 0.3s ease;
+}
+
+.module-reading-header.open .reading-chevron {
+    transform: rotate(180deg);
+}
+
+.module-reading-body {
+    padding: var(--space-6) var(--space-8);
+    display: none;
+}
+
+.module-reading-body.open {
+    display: block;
+}
+
+.reading-section {
+    margin-bottom: var(--space-8);
+}
+
+.reading-section:last-child {
+    margin-bottom: 0;
+}
+
+.reading-section h4 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-3);
+    color: var(--text-primary);
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--blue-50);
+}
+
+.reading-section p {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.reading-section ul,
+.reading-section ol {
+    margin-bottom: var(--space-4);
+    padding-left: var(--space-6);
+}
+
+.reading-section li {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.reading-section pre {
+    background: var(--gray-900);
+    color: #e8eaed;
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+    margin-bottom: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+}
+
+.reading-section code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.reading-section p code {
+    background: var(--blue-50);
+    color: var(--primary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.reading-callout {
+    background: linear-gradient(135deg, var(--blue-50) 0%, #e8f5e9 100%);
+    border-left: 4px solid var(--primary);
+    padding: var(--space-4) var(--space-5);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: var(--space-4);
+}
+
+.reading-callout h5 {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-2);
+    color: var(--primary);
+}
+
+.reading-callout p {
+    margin-bottom: 0;
+    font-size: var(--text-sm);
+}
+
+.reading-warning {
+    background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%);
+    border-left-color: var(--google-yellow);
+}
+
+.reading-warning h5 {
+    color: var(--google-yellow);
+}
+
+.reading-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--space-4);
+    font-size: var(--text-sm);
+}
+
+.reading-table th,
+.reading-table td {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-light);
+    text-align: left;
+}
+
+.reading-table th {
+    background: var(--bg-secondary);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+}
+
+.reading-table td {
+    color: var(--text-secondary);
+}
+
+.reading-table code {
+    background: var(--blue-50);
+    color: var(--primary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .module-reading-body {
+        padding: var(--space-4) var(--space-5);
+    }
+    
+    .module-reading-header {
+        padding: var(--space-4);
+    }
+}

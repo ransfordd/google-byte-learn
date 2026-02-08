@@ -163,6 +163,7 @@
                     <div class="course-main">
                         <div class="tabs">
                             <button class="tab active" data-tab="syllabus">Syllabus</button>
+                            <button class="tab" data-tab="coursenotes">Course Notes</button>
                             <button class="tab" data-tab="overview">Overview</button>
                             <button class="tab" data-tab="reviews">Reviews</button>
                         </div>
@@ -284,6 +285,10 @@
                                 </div>
                             </div>
 
+                            <div class="tab-pane" id="coursenotes">
+                                <div class="course-notes-content" id="courseNotesContent"></div>
+                            </div>
+
                             <div class="tab-pane" id="overview">
                                 <div class="overview-section">
                                     <h3>What You'll Learn</h3>
@@ -358,7 +363,11 @@
     </footer>
 
     <script src="../../js/app.js"></script>
+    <script src="../../js/course-notes.js"></script>
+    <script src="../../js/course-notes-3.js"></script>
+    <script src="../../js/course-notes-render.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => { renderCourseNotes('computer-fundamentals'); });
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));

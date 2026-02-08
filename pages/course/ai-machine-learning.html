@@ -199,6 +199,7 @@
                         <!-- Tabs -->
                         <div class="tabs">
                             <button class="tab active" data-tab="syllabus">Syllabus</button>
+                            <button class="tab" data-tab="coursenotes">Course Notes</button>
                             <button class="tab" data-tab="overview">Overview</button>
                             <button class="tab" data-tab="reviews">Reviews</button>
                         </div>
@@ -644,6 +645,11 @@
                                 </div>
                             </div>
 
+                            <!-- Course Notes Tab -->
+                            <div class="tab-pane" id="coursenotes">
+                                <div class="course-notes-content" id="courseNotesContent"></div>
+                            </div>
+
                             <!-- Overview Tab -->
                             <div class="tab-pane" id="overview">
                                 <div class="overview-section">
@@ -790,7 +796,11 @@
     </footer>
 
     <script src="../../js/app.js"></script>
+    <script src="../../js/course-notes.js"></script>
+    <script src="../../js/course-notes-2.js"></script>
+    <script src="../../js/course-notes-render.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => { renderCourseNotes('ai-machine-learning'); });
         // Tab functionality
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
