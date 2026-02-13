@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Students - Tutor Dashboard</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages/dashboard.css">
+    <link rel="stylesheet" href="../css/pages/tutor-dashboard.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="app-sidebar sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-brand">
+                    <svg class="sidebar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                        <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="sidebar-title">ByteLearn <span class="badge badge-warning"
+                            style="font-size: 0.6em; vertical-align: middle; margin-left: 4px;">Tutor</span></span>
+                </a>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <nav class="sidebar-nav">
+                    <div class="sidebar-section">
+                        <a href="tutor-dashboard.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                            <span class="sidebar-link-text">Dashboard</span>
+                        </a>
+                        <a href="tutor-courses.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                            <span class="sidebar-link-text">My Courses</span>
+                        </a>
+                        <a href="tutor-students.html" class="sidebar-link active">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span class="sidebar-link-text">Students</span>
+                        </a>
+                        <a href="tutor-reviews.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            <span class="sidebar-link-text">Reviews</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user dropdown" id="userDropdown">
+                    <div class="avatar" style="background: var(--google-red);">S</div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name">Dr. Sarah Chen</span>
+                        <span class="sidebar-user-email">sarah.chen@bytelearn.edu</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="app-main">
+            <header class="app-header">
+                <div class="header-title">
+                    <h1>Student Directory</h1>
+                </div>
+                <div class="navbar-actions" style="margin-left: auto;">
+                    <div class="search-bar" style="width: 300px;">
+                        <input type="text" class="form-control" placeholder="Search students by name or email...">
+                    </div>
+                    <button class="btn btn-outline btn-sm">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Export CSV
+                    </button>
+                </div>
+            </header>
+
+            <div class="app-content">
+                <!-- Enhanced Stats Summary -->
+                <section class="stats-summary">
+                    <div class="summary-card primary">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">↑ 12%</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>1,245</h3>
+                            <p>Active Students</p>
+                        </div>
+                    </div>
+                    <div class="summary-card success">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">Stable</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>85%</h3>
+                            <p>Avg. Completion</p>
+                        </div>
+                    </div>
+                    <div class="summary-card purple">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <line x1="19" y1="8" x2="19" y2="14"></line>
+                                    <line x1="22" y1="11" x2="16" y2="11"></line>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">+4</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>42</h3>
+                            <p>New This Month</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="card shadow-lg" style="border-radius: var(--radius-2xl); overflow: hidden;">
+                    <div class="card-header d-flex justify-between align-center p-6 border-bottom"
+                        style="background: var(--gray-50);">
+                        <div class="tabs p-0 border-none" id="studentTabs">
+                            <button class="tab active" data-filter="all">All Students</button>
+                            <button class="tab" data-filter="Active">In Progress</button>
+                            <button class="tab" data-filter="Completed">Completed</button>
+                            <button class="tab" data-filter="Inactive">Inactive</button>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="admin-table" id="studentTable">
+                            <thead>
+                                <tr>
+                                    <th>Student Name & Profile</th>
+                                    <th>Enrolled Course</th>
+                                    <th>Learning Progress</th>
+                                    <th>Status</th>
+                                    <th>Last Activity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="animate-fade-in-up" style="animation-delay: 100ms;" data-status="Active">
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-premium"
+                                                style="background: var(--blue-500); color: white;">K</div>
+                                            <div class="d-flex flex-column">
+                                                <span class="font-bold text-base"
+                                                    style="color: var(--text-primary);">Kevin Adams</span>
+                                                <span class="text-xs text-muted">kevin.a@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="course-info-cell">
+                                            <div class="font-bold text-sm" style="color: var(--text-primary);">
+                                                Programming with Python</div>
+                                            <div class="text-xs text-muted">Intermediate Level</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress-labeled" style="width: 180px;">
+                                            <div class="progress-premium" style="flex: 1;">
+                                                <div class="progress-bar-vibrant" style="width: 75%;"></div>
+                                            </div>
+                                            <span class="progress-value font-bold"
+                                                style="color: var(--google-blue);">75%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-success badge-vibrant">Active</span></td>
+                                    <td class="text-sm font-medium">2 hours ago</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-ghost btn-icon btn-message"
+                                                style="color: var(--google-blue);" title="Message Kevin Adams">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path
+                                                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <button class="btn btn-ghost btn-icon btn-view-details"
+                                                style="color: var(--gray-600);" title="View Details for Kevin Adams">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="animate-fade-in-up" style="animation-delay: 200ms;" data-status="Completed">
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-premium"
+                                                style="background: var(--google-green); color: white;">L</div>
+                                            <div class="d-flex flex-column">
+                                                <span class="font-bold text-base"
+                                                    style="color: var(--text-primary);">Linda Smith</span>
+                                                <span class="text-xs text-muted">linda.s@yahoo.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="course-info-cell">
+                                            <div class="font-bold text-sm" style="color: var(--text-primary);">
+                                                Full-Stack Web Dev</div>
+                                            <div class="text-xs text-muted">Advanced Track</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress-labeled" style="width: 180px;">
+                                            <div class="progress-premium" style="flex: 1;">
+                                                <div class="progress-bar-vibrant"
+                                                    style="width: 100%; background: var(--google-green);"></div>
+                                            </div>
+                                            <span class="progress-value font-bold"
+                                                style="color: var(--google-green);">100%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-gray badge-vibrant">Completed</span></td>
+                                    <td class="text-sm font-medium">1 day ago</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-ghost btn-icon btn-message"
+                                                style="color: var(--google-blue);" title="Message Linda Smith">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path
+                                                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <button class="btn btn-ghost btn-icon btn-view-details"
+                                                style="color: var(--gray-600);" title="View Details for Linda Smith">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="animate-fade-in-up" style="animation-delay: 300ms;" data-status="Inactive">
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-premium"
+                                                style="background: var(--google-yellow); color: white;">M</div>
+                                            <div class="d-flex flex-column">
+                                                <span class="font-bold text-base"
+                                                    style="color: var(--text-primary);">Michael Ross</span>
+                                                <span class="text-xs text-muted">mike@pearson.edu</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="course-info-cell">
+                                            <div class="font-bold text-sm" style="color: var(--text-primary);">
+                                                Cloud Architecture</div>
+                                            <div class="text-xs text-muted">Expert Level</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress-labeled" style="width: 180px;">
+                                            <div class="progress-premium" style="flex: 1;">
+                                                <div class="progress-bar-vibrant"
+                                                    style="width: 15%; background: var(--google-red);"></div>
+                                            </div>
+                                            <span class="progress-value font-bold"
+                                                style="color: var(--google-red);">15%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-warning badge-vibrant">Inactive</span></td>
+                                    <td class="text-sm font-medium">2 weeks ago</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-ghost btn-icon btn-message"
+                                                style="color: var(--google-blue);" title="Message Michael Ross">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path
+                                                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <button class="btn btn-ghost btn-icon btn-view-details"
+                                                style="color: var(--gray-600);" title="View Details for Michael Ross">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Profile Modal -->
+            <div class="modal-backdrop" id="profileModalBackdrop"></div>
+            <div class="modal" id="profileModal">
+                <div class="modal-header">
+                    <h3 class="modal-title">Student Profile</h3>
+                    <button class="btn btn-ghost btn-icon modal-close" id="closeModal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column align-center gap-4 text-center">
+                        <div id="modalAvatar" class="avatar-2xl"
+                            style="display: flex; align-items: center; justify-content: center; margin: 0 auto; border-radius: var(--radius-xl); font-size: 2.5rem; width: 80px; height: 80px; color: white;">
+                            K</div>
+                        <div>
+                            <h2 id="modalName" class="font-bold text-xl mb-1">Kevin Adams</h2>
+                            <p id="modalEmail" class="text-muted">kevin.a@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="d-grid gap-4 mt-4" style="display: grid; grid-template-columns: 1fr 1fr;">
+                        <div class="p-3 bg-light" style="border-radius: var(--radius-lg); background: var(--gray-50);">
+                            <span class="text-xs text-muted d-block mb-1">Enrolled Course</span>
+                            <p id="modalCourse" class="font-bold text-sm">Programming with Python</p>
+                        </div>
+                        <div class="p-3 bg-light" style="border-radius: var(--radius-lg); background: var(--gray-50);">
+                            <span class="text-xs text-muted d-block mb-1">Learning Progress</span>
+                            <p id="modalProgress" class="font-bold text-sm text-primary">75%</p>
+                        </div>
+                        <div class="p-3 bg-light" style="border-radius: var(--radius-lg); background: var(--gray-50);">
+                            <span class="text-xs text-muted d-block mb-1">Current Status</span>
+                            <p id="modalStatus" class="font-bold text-sm">Active</p>
+                        </div>
+                        <div class="p-3 bg-light" style="border-radius: var(--radius-lg); background: var(--gray-50);">
+                            <span class="text-xs text-muted d-block mb-1">Joined Date</span>
+                            <p class="font-bold text-sm">Jan 12, 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="closeModalBtn">Close</button>
+                    <button class="btn btn-primary" id="modalMessageBtn">Send Message</button>
+                </div>
+            </div>
+
+            <!-- Toast Notification Container -->
+            <div id="toastContainer" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;"></div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Sidebar Toggle
+        document.getElementById('sidebarToggle')?.addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.querySelector('.app-main').classList.toggle('sidebar-collapsed');
+        });
+
+        // Student Filtering Logic
+        const tabButtons = document.querySelectorAll('#studentTabs .tab');
+        const tableRows = document.querySelectorAll('#studentTable tbody tr');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                // Update active tab
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter rows
+                tableRows.forEach(row => {
+                    const status = row.getAttribute('data-status');
+                    if (filter === 'all' || status === filter) {
+                        row.style.display = '';
+                        row.classList.remove('animate-fade-in-up');
+                        void row.offsetWidth; // Trigger reflow
+                        row.classList.add('animate-fade-in-up');
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search Filtering (Bonus)
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput?.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const activeFilter = document.querySelector('#studentTabs .tab.active').getAttribute('data-filter');
+
+            tableRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const status = row.getAttribute('data-status');
+                const matchesSearch = text.includes(query);
+                const matchesTab = activeFilter === 'all' || status === activeFilter;
+
+                if (matchesSearch && matchesTab) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        // Student Row Actions
+        const modal = document.getElementById('profileModal');
+        const backdrop = document.getElementById('profileModalBackdrop');
+        const toastContainer = document.getElementById('toastContainer');
+
+        function showStudentToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'animate-fade-in-up';
+            toast.style.cssText = `
+                background: var(--bg-primary);
+                border-left: 4px solid var(--google-blue);
+                padding: 1rem 1.5rem;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-xl);
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 0.75rem;
+                min-width: 300px;
+                border: 1px solid var(--border-light);
+            `;
+            toast.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--google-blue)" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <div class="text-sm font-medium">${message}</div>
+            `;
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(10px)';
+                toast.style.transition = 'all 0.4s ease';
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        tableRows.forEach(row => {
+            const studentName = row.querySelector('.user-cell .font-bold').textContent;
+            const studentEmail = row.querySelector('.user-cell .text-muted').textContent;
+            const studentInitial = row.querySelector('.avatar-premium').textContent;
+            const studentColor = row.querySelector('.avatar-premium').style.background;
+            const courseName = row.querySelector('.course-info-cell .font-bold').textContent;
+            const progress = row.querySelector('.progress-value').textContent;
+            const statusBadge = row.querySelector('.badge').outerHTML;
+
+            // Message Action
+            row.querySelector('.btn-message')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showStudentToast(`Opening chat with ${studentName}...`);
+            });
+
+            // View Details Action
+            row.querySelector('.btn-view-details')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                // Populate Modal
+                document.getElementById('modalAvatar').textContent = studentInitial;
+                document.getElementById('modalAvatar').style.background = studentColor;
+                document.getElementById('modalAvatar').style.color = 'white';
+                document.getElementById('modalName').textContent = studentName;
+                document.getElementById('modalEmail').textContent = studentEmail;
+                document.getElementById('modalCourse').textContent = courseName;
+                document.getElementById('modalProgress').textContent = progress;
+                document.getElementById('modalStatus').innerHTML = statusBadge;
+
+                // Show Modal
+                modal.classList.add('active');
+                backdrop.classList.add('active');
+            });
+        });
+
+        // Modal Close Logic
+        const closeStudentModal = () => {
+            modal.classList.remove('active');
+            backdrop.classList.remove('active');
+        };
+
+        document.getElementById('closeModal')?.addEventListener('click', closeStudentModal);
+        document.getElementById('closeModalBtn')?.addEventListener('click', closeStudentModal);
+        backdrop?.addEventListener('click', closeStudentModal);
+        document.getElementById('modalMessageBtn')?.addEventListener('click', () => {
+            const name = document.getElementById('modalName').textContent;
+            closeStudentModal();
+            setTimeout(() => showStudentToast(`Starting conversation with ${name}...`), 300);
+        });
+    </script>
+</body>
+
+</html>

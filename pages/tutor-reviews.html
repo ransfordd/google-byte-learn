@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reviews - Tutor Dashboard</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages/dashboard.css">
+    <link rel="stylesheet" href="../css/pages/tutor-dashboard.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="app-sidebar sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-brand">
+                    <svg class="sidebar-logo" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#4285F4" />
+                        <path d="M16 24L22 30L34 18" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="sidebar-title">ByteLearn <span class="badge badge-warning"
+                            style="font-size: 0.6em; vertical-align: middle; margin-left: 4px;">Tutor</span></span>
+                </a>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <nav class="sidebar-nav">
+                    <div class="sidebar-section">
+                        <a href="tutor-dashboard.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                            <span class="sidebar-link-text">Dashboard</span>
+                        </a>
+                        <a href="tutor-courses.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                            <span class="sidebar-link-text">My Courses</span>
+                        </a>
+                        <a href="tutor-students.html" class="sidebar-link">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span class="sidebar-link-text">Students</span>
+                        </a>
+                        <a href="tutor-reviews.html" class="sidebar-link active">
+                            <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            <span class="sidebar-link-text">Reviews</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user dropdown" id="userDropdown">
+                    <div class="avatar" style="background: var(--google-red);">S</div>
+                    <div class="sidebar-user-info">
+                        <span class="sidebar-user-name">Dr. Sarah Chen</span>
+                        <span class="sidebar-user-email">sarah.chen@bytelearn.edu</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="app-main">
+            <header class="app-header">
+                <div class="header-title">
+                    <h1>Feedback & Reviews</h1>
+                </div>
+                <div class="navbar-actions" style="margin-left: auto;">
+                    <div class="d-flex gap-4">
+                        <select class="form-control text-sm" style="width: auto;">
+                            <option>Filter by Course: All</option>
+                            <option>Programming with Python</option>
+                            <option>Full-Stack Web Dev</option>
+                        </select>
+                        <select class="form-control text-sm" style="width: auto;">
+                            <option>Rating: All Stars</option>
+                            <option>5 Stars</option>
+                            <option>4 Stars</option>
+                            <option>3 Stars & Below</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <div class="app-content">
+                <section class="stats-summary">
+                    <div class="summary-card purple">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">Excellent</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>4.8</h3>
+                            <p>Average Rating</p>
+                        </div>
+                    </div>
+                    <div class="summary-card primary">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">+15 new</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>458</h3>
+                            <p>Total Reviews</p>
+                        </div>
+                    </div>
+                    <div class="summary-card success">
+                        <div class="summary-header">
+                            <div class="summary-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path
+                                        d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="summary-trend trend-up">Top 5%</span>
+                        </div>
+                        <div class="summary-body">
+                            <h3>92%</h3>
+                            <p>Positive Feedback</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="dashboard-grid">
+                    <div class="grid-left">
+                        <div class="activity-feed">
+                            <!-- Review Card 1 -->
+                            <div class="review-card-premium mb-6 animate-fade-in-up" style="animation-delay: 100ms;">
+                                <div class="d-flex justify-between mb-4">
+                                    <div class="d-flex gap-4">
+                                        <div class="avatar-premium" style="background: var(--blue-500); color: white;">J
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-lg" style="color: var(--text-primary);">John Doe
+                                            </div>
+                                            <div class="text-xs text-muted">2 days ago • Programming with Python</div>
+                                        </div>
+                                    </div>
+                                    <div class="google-yellow font-bold">★★★★★</div>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--text-primary);">"Truly
+                                    transformative content!"</h3>
+                                <p class="text-sm text-secondary leading-relaxed mb-6" style="font-size: 0.95rem;">
+                                    The way Dr. Chen explains complex Python concepts makes them feel so intuitive.
+                                    I especially loved the modules on decorators and generators. Highly recommended
+                                    for anyone looking to take their skills to the next level.
+                                </p>
+                                <div class="d-flex gap-3 pt-4 border-top">
+                                    <button class="btn btn-primary btn-sm rounded-lg">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                        Reply to Student
+                                    </button>
+                                    <button class="btn btn-ghost btn-sm rounded-lg">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                        Feature on Profile
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Review Card 2 -->
+                            <div class="review-card-premium mb-6 animate-fade-in-up" style="animation-delay: 200ms;">
+                                <div class="d-flex justify-between mb-4">
+                                    <div class="d-flex gap-4">
+                                        <div class="avatar-premium"
+                                            style="background: var(--google-green); color: white;">S</div>
+                                        <div>
+                                            <div class="font-bold text-lg" style="color: var(--text-primary);">Sarah
+                                                Jenkins</div>
+                                            <div class="text-xs text-muted">1 week ago • Full-Stack Web Dev</div>
+                                        </div>
+                                    </div>
+                                    <div class="google-yellow font-bold">★★★★☆</div>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--text-primary);">Great course, but
+                                    needs more React examples</h3>
+                                <p class="text-sm text-secondary leading-relaxed mb-6" style="font-size: 0.95rem;">
+                                    I learned so much about backend integration, but I wish there were a few more
+                                    deep-dives into React Hooks and state management patterns. Overall, fantastic value.
+                                </p>
+                                <div class="d-flex gap-3 pt-4 border-top">
+                                    <button class="btn btn-primary btn-sm rounded-lg">Reply</button>
+                                    <button class="btn btn-ghost btn-sm rounded-lg">Mark as Helpful</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-right">
+                        <!-- Rating Distribution -->
+                        <div class="card p-6 mb-6 shadow-md" style="border-radius: var(--radius-2xl);">
+                            <h3 class="text-base font-bold mb-6">Rating Distribution</h3>
+                            <div class="d-flex flex-column gap-4">
+                                <div class="progress-labeled">
+                                    <span class="text-xs font-bold w-12" style="color: var(--text-primary);">5
+                                        Star</span>
+                                    <div class="progress-premium" style="flex: 1;">
+                                        <div class="progress-bar-vibrant"
+                                            style="width: 85%; background: var(--google-green);"></div>
+                                    </div>
+                                    <span class="text-xs font-bold" style="color: var(--google-green);">85%</span>
+                                </div>
+                                <div class="progress-labeled">
+                                    <span class="text-xs font-bold w-12" style="color: var(--text-primary);">4
+                                        Star</span>
+                                    <div class="progress-premium" style="flex: 1;">
+                                        <div class="progress-bar-vibrant"
+                                            style="width: 10%; background: var(--google-yellow);"></div>
+                                    </div>
+                                    <span class="text-xs font-bold" style="color: var(--google-yellow);">10%</span>
+                                </div>
+                                <div class="progress-labeled">
+                                    <span class="text-xs font-bold w-12" style="color: var(--text-primary);">3
+                                        Star</span>
+                                    <div class="progress-premium" style="flex: 1;">
+                                        <div class="progress-bar-vibrant"
+                                            style="width: 3%; background: var(--google-red);"></div>
+                                    </div>
+                                    <span class="text-xs font-bold" style="color: var(--google-red);">3%</span>
+                                </div>
+                                <div class="divider my-4"></div>
+                                <div class="text-center">
+                                    <div class="text-4xl font-black mb-1" style="color: var(--text-primary);">4.8</div>
+                                    <div class="google-yellow text-lg mb-2">★★★★★</div>
+                                    <div class="text-xs text-muted font-medium">Global Student Rating</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Tips -->
+                        <div class="card p-6 bg-blue-50 border-none shadow-sm"
+                            style="border-radius: var(--radius-2xl); border-left: 4px solid var(--google-blue);">
+                            <h3 class="text-base font-bold mb-3" style="color: var(--google-blue);">Engagement Tip 💡
+                            </h3>
+                            <p class="text-sm leading-relaxed text-secondary" style="font-weight: 500;">
+                                Responding to reviews (especially 4-star ones) can increase your student
+                                satisfaction scores by up to 15%. Engagement shows students you care!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.getElementById('sidebarToggle')?.addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.querySelector('.app-main').classList.toggle('sidebar-collapsed');
+        });
+    </script>
+</body>
+
+</html>
